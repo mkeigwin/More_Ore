@@ -11,8 +11,43 @@ button {
 }
 
 .section#middle {
-  background-image: url('http://eskipaper.com/images/cave-background-1.jpg');
-  /*background-size: cover;*/
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+}
+
+.furnace-make-container {
+
+}
+
+.furnace-image {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 30vh;
+  width: auto;
+  cursor: pointer;
+  padding: 5vh;
+}
+
+.furnace-button {
+  height: 4vh;
+  width: 4vh;
+}
+
+.furnace-tab-content > button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5vh;
+
+  width: 90%;
+  height: 14vh;
+  border-radius: 15px;
+  outline: none;
+  color: white;
+  border-width: 5px;
+  background-image: linear-gradient(to bottom, #858585, #394952);
 }
 
 .upgrade-pickaxe-modal {
@@ -49,6 +84,12 @@ button {
   width: 100%;
   bottom: 0;
   font-size: 3vh;
+}
+
+.furnace-text {
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .app-container {
@@ -168,7 +209,7 @@ button {
   font-size: 3vh;
 }
 
-.upgrade-button:hover {
+button:hover {
   background-image: linear-gradient(to bottom, #bababa, #7f8182);
 }
 

@@ -65,4 +65,5 @@ $(() => {
   $rock.mouseout(() => {
     $rock.css('height', '40vh')
   })
+
 })

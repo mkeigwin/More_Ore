@@ -93,7 +93,7 @@
       </div>
 
       <div class='section' id='middle'>
-        <img class='rock' src="http://i.imgur.com/7Vic33h.png?1" alt="rock">
+        <img class='rock' src="./assets/rock.png">
       </div>
 
       <div class='section' id='right'>
@@ -121,11 +121,25 @@
               <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
               <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
             </div>
+
+
             <div class="furnace-tab-content" style='display: none'>
               <div class='tab-description'>
                 Smelt your ores into bars!
               </div>
-            </div>
+              <p class='furnace-text'>10 ores = 1 bar</p>
+              <img class='furnace-image' src="./assets/furnace_inactive.png" alt="smelter">
+              <div class="furnace-make-container">
+                <h3>Bronze Bar: <button class='furnace-button bronze-ore-subtract'>-</button> <span class='furnace-bronze-amount'>0</span> <button class='furnace-button bronze-ore-add'>+</button></h3>
+                <h3>Iron Bar: <button class='furnace-button iron-ore-subtract'>-</button> <span class='furnace-iron-amount'>0</span> <button class='furnace-button iron-ore-add'>+</button></h3>
+                <h3>Gold Bar: <button class='furnace-button gold-ore-subtract'>-</button> <span class='furnace-gold-amount'>0</span> <button class='furnace-button gold-ore-add'>+</button></h3>
+                <h3>Platinum Bar: <button class='furnace-button platinum-ore-subtract'>-</button> <span class='furnace-platinum-amount'>0</span> <button class='furnace-button platinum-ore-add'>+</button></h3>
+                <h3>Diamond Bar: <button class='furnace-button diamond-ore-subtract'>-</button> <span class='furnace-diamond-amount'>0</span> <button class='furnace-button diamond-ore-add'>+</button></h3>
+              </div>
+              <button class='smelt-button'>SMELT</button>
+            </div> <!-- furnace-tab-content -->
+
+
             <div class="tavern-tab-content" style='display: none'>tavern</div>
             <div class="quests-tab-content" style='display: none'>quests</div>
           </div> <!-- tab-content -->
