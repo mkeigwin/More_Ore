@@ -1,0 +1,23 @@
+{
+  "name": "more_ore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSyn/More_Ore.git"
+  },
+  "author": "Synclair Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSyn/More_Ore/issues"
+  },
+  "homepage": "https://github.com/iSyn/More_Ore#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}
