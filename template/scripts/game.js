@@ -4,7 +4,7 @@ $(() => {
 
   let amountPerClick = 1
 
-  let bOre = 100
+  let bOre = 0
   let iOre = 0
   let gOre = 0
   let pOre = 0
@@ -102,7 +102,7 @@ $(() => {
       $('.bBar-amount').text(bBar)
       amountPerClick *= 2
       pickaxeLevel++
-      pickaxeUpgradePrice *= 2.1
+      pickaxeUpgradePrice *= 1.5
       $('.upgrade-pickaxe-price').text(pickaxeUpgradePrice)
       $('.pickaxe-level').text(pickaxeLevel)
     }

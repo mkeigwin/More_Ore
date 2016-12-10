@@ -16,7 +16,7 @@
 
     <div class="upgrade-pickaxe-modal">
       <h1>PICKAXE lv.<span class='pickaxe-level'>1</span></h1>
-      <p>Doubles the amount of ore per click <br> <span style="font-size: 3vh">Pick harder! Pick faster! Pick stronger!</span></p>
+      <p>Doubles the amount of ore per click <br> Chance for Iron Ore to be mined <br> <span style="font-size: 3vh">Pick harder! Pick faster! Pick stronger!</span></p>
       <footer> Price: <span class='upgrade-pickaxe-price'>10</span> bronze bars</footer>
     </div>
 
@@ -114,7 +114,10 @@
                 <h3 class="upgrade-button-text">Upgrade Pickaxe</h3>
                 <p class="upgrade-button-price"><span class="upgrade-pickaxe-price">10</span> bronze bars</p>
               </button>
-              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+              <!-- <button class='upgrade-button'>
+                <h3 class='upgrade-button-text'>Unlock Extra Furnace</h3>
+                <p class="upgrade-button-price"><span class="unlock-furnace-price">5</span> iron bars</p>
+              </button> -->
               <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
               <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
               <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
@@ -128,15 +131,20 @@
                 Smelt your ores into bars!
               </div>
               <p class='furnace-text'>10 ores = 1 bar</p>
-              <img class='furnace-image' src="./assets/furnace_inactive.png" alt="smelter">
-              <div class="furnace-make-container">
-                <h3>Bronze Bar: <button class='furnace-button bronze-ore-subtract'>-</button> <span class='furnace-bronze-amount'>0</span> <button class='furnace-button bronze-ore-add'>+</button></h3>
-                <h3>Iron Bar: <button class='furnace-button iron-ore-subtract'>-</button> <span class='furnace-iron-amount'>0</span> <button class='furnace-button iron-ore-add'>+</button></h3>
-                <h3>Gold Bar: <button class='furnace-button gold-ore-subtract'>-</button> <span class='furnace-gold-amount'>0</span> <button class='furnace-button gold-ore-add'>+</button></h3>
-                <h3>Platinum Bar: <button class='furnace-button platinum-ore-subtract'>-</button> <span class='furnace-platinum-amount'>0</span> <button class='furnace-button platinum-ore-add'>+</button></h3>
-                <h3>Diamond Bar: <button class='furnace-button diamond-ore-subtract'>-</button> <span class='furnace-diamond-amount'>0</span> <button class='furnace-button diamond-ore-add'>+</button></h3>
+
+              <div class="furnace-container">
+                <div class="furnace">
+                  <img class='furnace-image' src="./assets/furnace_inactive.png" alt="smelter">
+                  <div class="furnace-make-container">
+                    <h3>Bronze Bar: <button class='furnace-button bronze-ore-subtract'>-</button> <span class='furnace-bronze-amount'>0</span> <button class='furnace-button bronze-ore-add'>+</button></h3>
+                    <h3>Iron Bar: <button class='furnace-button iron-ore-subtract'>-</button> <span class='furnace-iron-amount'>0</span> <button class='furnace-button iron-ore-add'>+</button></h3>
+                    <h3>Gold Bar: <button class='furnace-button gold-ore-subtract'>-</button> <span class='furnace-gold-amount'>0</span> <button class='furnace-button gold-ore-add'>+</button></h3>
+                    <h3>Platinum Bar: <button class='furnace-button platinum-ore-subtract'>-</button> <span class='furnace-platinum-amount'>0</span> <button class='furnace-button platinum-ore-add'>+</button></h3>
+                    <h3>Diamond Bar: <button class='furnace-button diamond-ore-subtract'>-</button> <span class='furnace-diamond-amount'>0</span> <button class='furnace-button diamond-ore-add'>+</button></h3>
+                  </div>
+                </div>
               </div>
-              <button class='smelt-button'>SMELT</button>
+              <button class='smelt-button upgrade-button'>SMELT</button>
             </div> <!-- furnace-tab-content -->
 
 

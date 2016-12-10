@@ -15,18 +15,22 @@ button {
   background-size: cover;
 }
 
+.furnace {
+  height: 20vh;
+  width: 100%;
+  background-color: red
+}
+
 .furnace-make-container {
 
 }
 
 .furnace-image {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  height: 30vh;
+  /*left: 5%;*/
+  height: 20vh;
   width: auto;
   cursor: pointer;
-  padding: 5vh;
 }
 
 .furnace-button {
