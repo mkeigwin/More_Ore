@@ -4,17 +4,17 @@ $(() => {
 
   let amountPerClick = 1
 
-  let bOre = 0
-  let iOre = 0
-  let gOre = 0
-  let pOre = 0
-  let dOre = 0
+  let bOre = 10000
+  let iOre = 10000
+  let gOre = 10000
+  let pOre = 10000
+  let dOre = 10000
 
-  let bBar = 0
-  let iBar = 0
-  let gBar = 0
-  let pBar = 0
-  let dBar = 0
+  let bBar = 10000
+  let iBar = 10000
+  let gBar = 10000
+  let pBar = 10000
+  let dBar = 10000
 
   let miner = 0
   let heroes = 0
@@ -45,49 +45,6 @@ $(() => {
     }
   })
 
-  $('.smelt-button').click(() => {
-    if (isSmelting === false) {
-      if ($('.furnace-bronze-amount').text() > 0) {
-
-        isSmelting = true
-
-        $('.furnace-image').attr('src', './assets/furnace_active.png');
-        let amountOfBronze = $('.furnace-bronze-amount').text()
-        console.log(amountOfBronze)
-        bOre -= (amountOfBronze * 10)
-        $('.bOre-amount').text(bOre)
-        $('.furnace-bronze-amount').text(0)
-        let timer = (2000 * amountOfBronze)
-        $('.smelt-button').text(`Amount left: ${amountOfBronze}`)
-
-        let countdownTimer = setInterval(() => {
-          amountOfBronze--
-          console.log(amountOfBronze)
-          bBar++
-          $('.smelt-button').text(`Amount left: ${amountOfBronze}`)
-          $('.bBar-amount').text(bBar)
-
-          if (amountOfBronze <= 0) {
-            console.log(amountOfBronze)
-            console.log('clearing interval')
-            clearInterval(countdownTimer)
-            $('.smelt-button').text('SMELT')
-            isSmelting = false
-            $('.furnace-image').attr('src', './assets/furnace_inactive.png');
-          }
-        }, smeltTime)
-      }
-
-      // setTimeout(() => {
-      //   clearInterval(countdownTimer)
-      //   $('.smelt-button').text('SMELT')
-      //   isSmelting = false
-      //   $('.furnace-image').attr('src', './assets/furnace_inactive.png');
-      // }, timer)
-    }
-
-  })
-
   $('.upgrade-pickaxe').mouseover((e) => {
     $('.upgrade-pickaxe-modal').css('display', 'block');
   })
@@ -107,6 +64,8 @@ $(() => {
       $('.pickaxe-level').text(pickaxeLevel)
     }
   })
+
+
 
   $('.rock').click(() => {
     bOre += amountPerClick;

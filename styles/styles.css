@@ -15,10 +15,27 @@ button {
   background-size: cover;
 }
 
-.furnace {
-  height: 20vh;
-  width: 100%;
-  background-color: red
+.furnace-modal {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background: white;
+  border: 1px solid black;
+}
+
+.furnace-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /*flex-shrink: 1;*/
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .furnace-make-container {
@@ -27,15 +44,9 @@ button {
 
 .furnace-image {
   position: relative;
-  /*left: 5%;*/
-  height: 20vh;
-  width: auto;
+  height: 30vh;
+  width: 30vh;
   cursor: pointer;
-}
-
-.furnace-button {
-  height: 4vh;
-  width: 4vh;
 }
 
 .furnace-tab-content > button {
