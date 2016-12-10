@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> More Ore </title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="app-container">
+
+    <div class="upgrade-pickaxe-modal">
+      <h1>PICKAXE lv.<span class='pickaxe-level'>1</span></h1>
+      <p>Doubles the amount of ore per click <br> Chance for Iron Ore to be mined <br> <span style="font-size: 3vh">Pick harder! Pick faster! Pick stronger!</span></p>
+      <footer> Price: <span class='upgrade-pickaxe-price'>10</span> bronze bars</footer>
+    </div>
+
+      <div class='section' id='left'>
+        <div class="tabs-container">
+          <div class="tab left-tab selected" id='inventory-tab'>Inventory</div>
+          <div class="tab left-tab" id='stats-tab'>Stats</div>
+        </div>
+
+        <div class="wrapper">
+          <div class="tab-content">
+            <div class="inventory-tab-content">
+              <ul class='inventory-section'>
+                <br>
+                <li class='section-title'>Raw Ores</li>
+                <br>
+                <li>Bronze Ore: <span class="amount-container"><span class='bOre-amount'>0</span></span></li>
+                <li>Iron Ore: <span class="amount-container"><span class='iOre-amount'>0</span></span></li>
+                <li>Gold Ore: <span class="amount-container"><span class='gOre-amount'>0</span></span></li>
+                <li>Platinum Ore: <span class="amount-container"><span class='pOre-amount'>0</span></span></li>
+                <li>Diamond Ore: <span class="amount-container"><span class='dOre-amount'>0</span></span></li>
+                <br>
+              </ul>
+              <ul class='inventory-section'>
+                <li class='section-title'>Smelted Bars</li>
+                <br>
+                <li>Bronze Bar: <span class="amount-container"><span class='bBar-amount'>0</span></span></li>
+                <li>Iron Bar: <span class="amount-container"><span class='iBar-amount'>0</span></span></li>
+                <li>Gold Bar: <span class="amount-container"><span class='gBar-amount'>0</span></span></li>
+                <li>Platinum Bar: <span class="amount-container"><span class='pBar-amount'>0</span></span></li>
+                <li>Diamond Bar: <span class="amount-container"><span class='dBar-amount'>0</span></span></li>
+                <br>
+              </ul>
+              <ul class='inventory-section'>
+                <li class='section-title'>People Working for You</li>
+                <br>
+                <li>Miners: <span class="amount-container"><span class='miner-amount'>0</span></span></li>
+                <li>Heroes: <span class="amount-container"><span class='hero-amount'>0</span></span></li>
+                <br>
+              </ul>
+            </div> <!-- inventory-tab-content -->
+            <div class="stats-tab-content" style="display: none">
+              <ul class='stats-section'>
+                <br>
+                <li class='section-title'>Raw Ores</li>
+                <br>
+                <li>Bronze Ore: <span class="amount-container"><span class='bOre-sec'>0</span>/sec</span></li>
+                <li>Iron Ore: <span class="amount-container"><span class='iOre-sec'>0</span>/sec</span></li>
+                <li>Gold Ore: <span class="amount-container"><span class='gOre-sec'>0</span>/sec</span></li>
+                <li>Platinum Ore: <span class="amount-container"><span class='pOre-sec'>0</span>/sec</span></li>
+                <li>Diamond Ore: <span class="amount-container"><span class='dOre-sec'>0</span>/sec</span></li>
+                <br>
+              </ul>
+              <ul class='inventory-section'>
+                <li class='section-title'>Smelted Bars</li>
+                <br>
+                <li>Bronze Bar: <span class="amount-container"><span class='bBar-sec'>0</span>/sec</span></li>
+                <li>Iron Bar: <span class="amount-container"><span class='iBar-sec'>0</span>/sec</span></li>
+                <li>Gold Bar: <span class="amount-container"><span class='gBar-sec'>0</span>/sec</span></li>
+                <li>Platinum Bar: <span class="amount-container"><span class='pBar-sec'>0</span>/sec</span></li>
+                <li>Diamond Bar: <span class="amount-container"><span class='dBar-sec'>0</span>/sec</span></li>
+                <br>
+              </ul>
+              <ul class='inventory-section'>
+                <li class='section-title'>People Working for You</li>
+                <br>
+                <li>Miners: <span class="amount-container"><span class='miners-sec'>0</span>/sec</span></li>
+                <li>Heroes: <span class="amount-container"><span class='hero-sec'>0</span>/sec</span></li>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='section' id='middle'>
+        <img class='rock' src="./assets/rock.png">
+      </div>
+
+      <div class='section' id='right'>
+        <div class="tabs-container">
+          <div class="tab right-tab selected" id="upgrades-tab">Upgrades</div>
+          <div class="tab right-tab" id="furnace-tab">Furnace</div>
+          <div class="tab right-tab" id="tavern-tab">Tavern</div>
+          <div class="tab right-tab" id="quests-tab">Quests</div>
+        </div>
+
+        <div class="wrapper">
+          <div class="tab-content">
+            <div class="upgrades-tab-content">
+              <div class='tab-description'>
+                Buy your upgrades here!
+              </div>
+              <button class='upgrade-button upgrade-pickaxe'>
+                <h3 class="upgrade-button-text">Upgrade Pickaxe</h3>
+                <p class="upgrade-button-price"><span class="upgrade-pickaxe-price">10</span> bronze bars</p>
+              </button>
+              <!-- <button class='upgrade-button'>
+                <h3 class='upgrade-button-text'>Unlock Extra Furnace</h3>
+                <p class="upgrade-button-price"><span class="unlock-furnace-price">5</span> iron bars</p>
+              </button> -->
+              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+              <button class='upgrade-button' disabled style='cursor: not-allowed'>???</button>
+            </div>
+
+
+            <div class="furnace-tab-content" style='display: none'>
+              <div class='tab-description'>
+                Smelt your ores into bars!
+              </div>
+              <p class='furnace-text'>10 ores = 1 bar</p>
+
+              <div class="furnace-container">
+                <div class="furnace">
+                  <img class='furnace-image' src="./assets/furnace_inactive.png" alt="smelter">
+                  <div class="furnace-make-container">
+                    <h3>Bronze Bar: <button class='furnace-button bronze-ore-subtract'>-</button> <span class='furnace-bronze-amount'>0</span> <button class='furnace-button bronze-ore-add'>+</button></h3>
+                    <h3>Iron Bar: <button class='furnace-button iron-ore-subtract'>-</button> <span class='furnace-iron-amount'>0</span> <button class='furnace-button iron-ore-add'>+</button></h3>
+                    <h3>Gold Bar: <button class='furnace-button gold-ore-subtract'>-</button> <span class='furnace-gold-amount'>0</span> <button class='furnace-button gold-ore-add'>+</button></h3>
+                    <h3>Platinum Bar: <button class='furnace-button platinum-ore-subtract'>-</button> <span class='furnace-platinum-amount'>0</span> <button class='furnace-button platinum-ore-add'>+</button></h3>
+                    <h3>Diamond Bar: <button class='furnace-button diamond-ore-subtract'>-</button> <span class='furnace-diamond-amount'>0</span> <button class='furnace-button diamond-ore-add'>+</button></h3>
+                  </div>
+                </div>
+              </div>
+              <button class='smelt-button upgrade-button'>SMELT</button>
+            </div> <!-- furnace-tab-content -->
+
+
+            <div class="tavern-tab-content" style='display: none'>tavern</div>
+            <div class="quests-tab-content" style='display: none'>quests</div>
+          </div> <!-- tab-content -->
+        </div> <!-- wrapper -->
+      </div>
+
+    </div> <!-- app-container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/game.js"></script>
+
+  </body>
+
+</html>
