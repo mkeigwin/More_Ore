@@ -1,0 +1,42 @@
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/css?family=#{$font})
+}
+
+@mixin flex-row-no-wrap() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@mixin tab-content() {
+  h1 {
+    text-align: center;
+    border-bottom: $border-size;
+    font-size: $tab-content-title-font-size;
+  }
+  p {
+    text-align: left;
+    font-size: $tab-content-text-font-size;
+    padding: 0 5px;
+
+    span {
+      float: right;
+    }
+  }
+}
+
+@mixin section() {
+  position: relative;
+  height: 99%;
+  width: 33%;
+  background: white;
+  border: $border-size;
+  overflow: hidden;
+}
+
+@mixin centerAnything() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

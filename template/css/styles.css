@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto'; }
+
+.app-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+  .app-container section.left-section {
+    position: relative;
+    height: 99%;
+    width: 33%;
+    background: white;
+    border: 2px solid black;
+    overflow: hidden; }
+    .app-container section.left-section .left-section-tabs {
+      position: relative;
+      width: 100%;
+      height: 10vh;
+      line-height: 10vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .app-container section.left-section .left-section-tabs .selected {
+        border-bottom: none !important; }
+      .app-container section.left-section .left-section-tabs .left-section-tab {
+        display: inline-block;
+        border-bottom: 2px solid black;
+        font-size: 3vw;
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        cursor: pointer; }
+        .app-container section.left-section .left-section-tabs .left-section-tab:not(:last-child) {
+          border-right: 2px solid black; }
+    .app-container section.left-section .left-section-tabs-content {
+      position: absolute;
+      height: 90vh;
+      width: 100%;
+      overflow: auto; }
+      .app-container section.left-section .left-section-tabs-content-inventory h1 {
+        text-align: center;
+        border-bottom: 2px solid black;
+        font-size: 2vw; }
+      .app-container section.left-section .left-section-tabs-content-inventory p {
+        text-align: left;
+        font-size: 1.5vw;
+        padding: 0 5px; }
+        .app-container section.left-section .left-section-tabs-content-inventory p span {
+          float: right; }
+      .app-container section.left-section .left-section-tabs-content-stats h1 {
+        text-align: center;
+        border-bottom: 2px solid black;
+        font-size: 2vw; }
+      .app-container section.left-section .left-section-tabs-content-stats p {
+        text-align: left;
+        font-size: 1.5vw;
+        padding: 0 5px; }
+        .app-container section.left-section .left-section-tabs-content-stats p span {
+          float: right; }
+  .app-container section.middle-section {
+    position: relative;
+    height: 99%;
+    width: 33%;
+    background: white;
+    border: 2px solid black;
+    overflow: hidden;
+    background-image: url("http://piq.codeus.net/static/media/userpics/piq_157402_400x400.png"); }
+    .app-container section.middle-section .ore-image {
+      position: relative;
+      height: 20vw;
+      width: auto;
+      cursor: pointer;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .app-container section.right-section {
+    position: relative;
+    height: 99%;
+    width: 33%;
+    background: white;
+    border: 2px solid black;
+    overflow: hidden; }
+    .app-container section.right-section .right-section-tabs {
+      position: relative;
+      width: 100%;
+      height: 10vh;
+      line-height: 10vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .app-container section.right-section .right-section-tabs .selected {
+        border-bottom: none !important; }
+      .app-container section.right-section .right-section-tabs .right-section-tab {
+        display: inline-block;
+        border-bottom: 2px solid black;
+        font-size: 1.5vw;
+        height: 100%;
+        width: 25%;
+        text-align: center;
+        cursor: pointer; }
+        .app-container section.right-section .right-section-tabs .right-section-tab:not(:last-child) {
+          border-right: 2px solid black; }
