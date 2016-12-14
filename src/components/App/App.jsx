@@ -81,32 +81,32 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // Save game automatically
-    // setInterval(() => {
-    //   console.log('saving game')
-    //   localStorage.setItem('orePerClick', this.state.orePerClick)
-    //   localStorage.setItem('bOre', this.state.bOre)
-    //   localStorage.setItem('iOre', this.state.iOre)
-    //   localStorage.setItem('gOre', this.state.gOre)
-    //   localStorage.setItem('pOre', this.state.pOre)
-    //   localStorage.setItem('dOre', this.state.dOre)
-    //   // Refined Ores
-    //   localStorage.setItem('r_bOre', this.state.r_bOre)
-    //   localStorage.setItem('r_iOre', this.state.r_iOre)
-    //   localStorage.setItem('r_gOre', this.state.r_gOre)
-    //   localStorage.setItem('r_pOre', this.state.r_pOre)
-    //   localStorage.setItem('r_dOre', this.state.r_dOre)
-    //   // Upgrade Stuff
-    //   localStorage.setItem('pickaxeLv', this.state.pickaxeLv)
-    //   localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice)
-    //   localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv)
-    //   localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost)
-    //   localStorage.setItem('unlockMineLv', this.state.unlockMineLv)
-    //   localStorage.setItem('furnaceLv', this.state.furnaceLv)
-    //   localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
-    //   localStorage.setItem('smeltTimer', this.state.smeltTimer)
-    //   localStorage.setItem('savedBefore', this.state.savedBefore)
-    // }, 5000)
+    Save game automatically
+    setInterval(() => {
+      console.log('saving game')
+      localStorage.setItem('orePerClick', this.state.orePerClick)
+      localStorage.setItem('bOre', this.state.bOre)
+      localStorage.setItem('iOre', this.state.iOre)
+      localStorage.setItem('gOre', this.state.gOre)
+      localStorage.setItem('pOre', this.state.pOre)
+      localStorage.setItem('dOre', this.state.dOre)
+      // Refined Ores
+      localStorage.setItem('r_bOre', this.state.r_bOre)
+      localStorage.setItem('r_iOre', this.state.r_iOre)
+      localStorage.setItem('r_gOre', this.state.r_gOre)
+      localStorage.setItem('r_pOre', this.state.r_pOre)
+      localStorage.setItem('r_dOre', this.state.r_dOre)
+      // Upgrade Stuff
+      localStorage.setItem('pickaxeLv', this.state.pickaxeLv)
+      localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice)
+      localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv)
+      localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost)
+      localStorage.setItem('unlockMineLv', this.state.unlockMineLv)
+      localStorage.setItem('furnaceLv', this.state.furnaceLv)
+      localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
+      localStorage.setItem('smeltTimer', this.state.smeltTimer)
+      localStorage.setItem('savedBefore', this.state.savedBefore)
+    }, 5000)
 
     console.log('loading game')
 
