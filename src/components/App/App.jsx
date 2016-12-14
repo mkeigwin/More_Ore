@@ -9,6 +9,7 @@ import RightSection from './RightSection/RightSection.jsx'
 
 import UpgradePickaxeModal from '../Modals/UpgradeModals/UpgradePickaxeModal.jsx'
 import UpgradeFurnaceModal from '../Modals/UpgradeModals/UpgradeFurnaceModal.jsx'
+import ReinforcePickaxeModal from '../Modals/UpgradeModals/ReinforcePickaxeModal.jsx'
 import FurnaceModal from '../Modals/FurnaceModal/FurnaceModal.jsx'
 
 import furnaceActive  from '../../assets/furnace_active.png'
@@ -36,6 +37,8 @@ class App extends Component {
 
       pickaxeLv: 1,
       pickaxeUpgradePrice: 10,
+      reinforcedPickaxeLv: 1,
+      reinforcedPickaxeCost: 'Bronze',
       unlockMineLv: 1,
 
       furnaceLv: 1,
@@ -44,8 +47,89 @@ class App extends Component {
       isSmelting: false,
       smeltTimer: 2,
       amountToMake: 0,
+
+      savedBefore: false,
     }
   }
+
+  componentDidMount() {
+    console.log('saving game')
+    localStorage.setItem('bOre', this.state.bOre);
+    localStorage.setItem('iOre', this.state.iOre);
+    localStorage.setItem('gOre', this.state.gOre);
+    localStorage.setItem('pOre', this.state.pOre);
+    localStorage.setItem('dOre', this.state.dOre);
+    // Refined Ores
+    localStorage.setItem('r_bOre', this.state.r_bOre);
+    localStorage.setItem('r_iOre', this.state.r_iOre);
+    localStorage.setItem('r_gOre', this.state.r_gOre);
+    localStorage.setItem('r_pOre', this.state.r_pOre);
+    localStorage.setItem('r_dOre', this.state.r_dOre);
+    // Upgrade Stuff
+    localStorage.setItem('pickaxeLv', this.state.pickaxeLv);
+    localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice);
+    localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv);
+    localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost);
+    localStorage.setItem('unlockMineLv', this.state.unlockMineLv);
+    localStorage.setItem('furnaceLv', this.state.furnaceLv);
+    localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice);
+    localStorage.setItem('smeltTimer', this.state.smeltTimer);
+    localStorage.setItem('savedBefore', this.state.savedBefore);
+
+    // Save game automatically
+    setInterval(() => {
+      console.log('saving game')
+      localStorage.setItem('bOre', this.state.bOre);
+      localStorage.setItem('iOre', this.state.iOre);
+      localStorage.setItem('gOre', this.state.gOre);
+      localStorage.setItem('pOre', this.state.pOre);
+      localStorage.setItem('dOre', this.state.dOre);
+      // Refined Ores
+      localStorage.setItem('r_bOre', this.state.r_bOre);
+      localStorage.setItem('r_iOre', this.state.r_iOre);
+      localStorage.setItem('r_gOre', this.state.r_gOre);
+      localStorage.setItem('r_pOre', this.state.r_pOre);
+      localStorage.setItem('r_dOre', this.state.r_dOre);
+      // Upgrade Stuff
+      localStorage.setItem('pickaxeLv', this.state.pickaxeLv);
+      localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice);
+      localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv);
+      localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost);
+      localStorage.setItem('unlockMineLv', this.state.unlockMineLv);
+      localStorage.setItem('furnaceLv', this.state.furnaceLv);
+      localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice);
+      localStorage.setItem('smeltTimer', this.state.smeltTimer);
+      localStorage.setItem('savedBefore', this.state.savedBefore);
+    }, 5000)
+
+    console.log('loading game')
+
+    this.setState({
+      bOre: parseInt(localStorage.getItem('bOre')),
+      iOre: parseInt(localStorage.getItem('iOre')),
+      gOre: parseInt(localStorage.getItem('gOre')),
+      pOre: parseInt(localStorage.getItem('pOre')),
+      dOre: parseInt(localStorage.getItem('dOre')),
+
+      r_bOre: parseInt(localStorage.getItem('r_bOre')),
+      r_iOre: parseInt(localStorage.getItem('r_iOre')),
+      r_gOre: parseInt(localStorage.getItem('r_gOre')),
+      r_pOre: parseInt(localStorage.getItem('r_pOre')),
+      r_dOre: parseInt(localStorage.getItem('r_dOre')),
+
+      pickaxeLv: parseInt(localStorage.getItem('pickaxeLv')),
+      pickaxeUpgradePrice: parseInt(localStorage.getItem('pickaxeUpgradePrice')),
+      reinforcedPickaxeLv: parseInt(localStorage.getItem('reinforcedPickaxeLv')),
+      reinforcedPickaxeCost: localStorage.getItem('reinforcedPickaxeCost'),
+      unlockMineLv: parseInt(localStorage.getItem('unlockMineLv')),
+
+      furnaceLv: parseInt(localStorage.getItem('furnaceLv')),
+      furnaceUpgradePrice: parseInt(localStorage.getItem('furnaceUpgradePrice')),
+
+      smeltTimer: parseInt(localStorage.getItem('smeltTimer')),
+    })
+  }
+
 
   smeltOre() {
     console.log('smeltOre firing')
@@ -242,6 +326,22 @@ class App extends Component {
     }
   }
 
+  reinforcePickaxe() {
+    console.log('reinforcePickaxe firing')
+    let whatToMine = document.querySelector('.what-to-mine').options[this.state.unlockMineLv]
+    // console.log(whatToMine)
+    if (this.state.reinforcedPickaxeCost === 'Bronze') {
+      if (this.state.bOre >= 1000) {
+        whatToMine.disabled = false
+        this.setState({
+          bOre: this.state.bOre -= 1000,
+          reinforcedPickaxeCost: 'Iron',
+          unlockMineLv: this.state.unlockMineLv += 1
+        })
+      }
+    }
+  }
+
   render(){
     return (
       <div className='app-container'>
@@ -249,6 +349,10 @@ class App extends Component {
         <UpgradePickaxeModal
           pickaxeLv={this.state.pickaxeLv}
           pickaxeUpgradePrice={this.state.pickaxeUpgradePrice}
+        />
+        <ReinforcePickaxeModal
+          reinforcedPickaxeLv={this.state.reinforcedPickaxeLv}
+          reinforcedPickaxeCost={this.state.reinforcedPickaxeCost}
         />
         <UpgradeFurnaceModal
           furnaceLv={this.state.furnaceLv}
@@ -293,6 +397,8 @@ class App extends Component {
           pickaxeUpgradePrice={this.state.pickaxeUpgradePrice}
           upgradeFurnace={this.upgradeFurnace.bind(this)}
           furnaceUpgradePrice={this.state.furnaceUpgradePrice}
+          reinforcePickaxe={this.reinforcePickaxe.bind(this)}
+          reinforcedPickaxeCost={this.state.reinforcedPickaxeCost}
         />
 
       </div>

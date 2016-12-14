@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'More_Ore',
+      title: 'More Ore',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),

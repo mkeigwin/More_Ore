@@ -561,6 +561,21 @@ section {
 .selected {
   border-bottom: none !important;
 }
+
+.save-game-button {
+  position: absolute;
+  bottom: 2%;
+  height: 5vw;
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  border-left-width: 5px;
+  border-bottom-width: 5px;
+  font-size: 3vw;
+  cursor: pointer;
+  text-align: center;
+}
 .middle-section {
   background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");
   background-size: cover;

@@ -69,6 +69,15 @@ class RightSection extends React.Component {
     upgradeFurnaceModal.style.display = 'none'
   }
 
+  showReinforcePickaxeModal() {
+    let reinforcePickaxeModal = document.querySelector('.reinforce-pickaxe-modal')
+    reinforcePickaxeModal.style.display = 'block'
+  }
+
+  hideReinforcePickaxeModal() {
+    let reinforcePickaxeModal = document.querySelector('.reinforce-pickaxe-modal')
+    reinforcePickaxeModal.style.display = 'none'
+  }
 
   render() {
     return(
@@ -100,7 +109,15 @@ class RightSection extends React.Component {
               <h3>Upgrade Furnace</h3>
               <p>Cost: {this.props.furnaceUpgradePrice} Refined Bronze</p>
             </button>
-            <button disabled>???</button>
+            <button
+              className='reinforce-pickaxe-button'
+              onClick={this.props.reinforcePickaxe}
+              onMouseOver={this.showReinforcePickaxeModal}
+              onMouseOut={this.hideReinforcePickaxeModal}
+              >
+              <h3>Reinfornce Pickaxe</h3>
+              <p>Cost: 1000 Raw {this.props.reinforcedPickaxeCost}</p>
+            </button>
             <button disabled>???</button>
             <button disabled>???</button>
             <button disabled>???</button>

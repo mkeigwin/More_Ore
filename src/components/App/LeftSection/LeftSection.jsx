@@ -81,6 +81,7 @@ class LeftSection extends React.Component {
             <p>Refined Platinum Per Second: <span>0</span></p>
             <p>Refined Diamond Per Second: <span>0</span></p>
           </div>
+
         </div>
 
       </section>
