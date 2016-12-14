@@ -50,21 +50,35 @@
 
 .right-section-tabs-content-upgrades button {
   position: relative;
-  height: 8vw;
-  width: 95%;
-  margin-top: 2.5%;
+  /*height: 8vw;*/
+  /*width: 95%;*/
+  height: 7.5vw;
+  width: 85%;
+
+  margin-top: 5%;
   left: 50%;
   transform: translateX(-50%);
   outline: none;
-  border-left-width: 5px;
-  border-bottom-width: 5px;
-  font-size: 3vw;
+  font-size: 2vw;
   cursor: pointer;
   text-align: center;
+
+  color: #666;
+  background-color: #eee;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom-width: 3px;
 }
 
 .right-section-tabs-content-upgrades button:hover {
-  opacity: .7;
+    background-color: #e3e3e3;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.right-section-tabs-content-upgrades button:active {
+  background-color: #CCC;
+  border-color: rgba(0,0,0,0.9);
 }
 
 .right-section-tabs-content-upgrades button p {

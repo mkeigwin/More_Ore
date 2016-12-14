@@ -65,15 +65,31 @@ section {
 
 .save-game-button {
   position: absolute;
-  bottom: 2%;
-  height: 5vw;
-  width: 98%;
+  bottom: 4%;
+  height: 4vw;
+  width: 70%;
+
   left: 50%;
   transform: translateX(-50%);
   outline: none;
-  border-left-width: 5px;
-  border-bottom-width: 5px;
-  font-size: 3vw;
+  font-size: 2vw;
   cursor: pointer;
   text-align: center;
+
+  color: #666;
+  background-color: #eee;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom-width: 3px;
+}
+
+.save-game-button:hover {
+    background-color: #e3e3e3;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.save-game-button:active {
+  background-color: #CCC;
+  border-color: rgba(0,0,0,0.9);
 }
