@@ -1,7 +1,19 @@
-.middle-section {
-  /*background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");*/
+section.middle-section {
+  position: relative;
+  width: 39%;
+  height: 99%;
+  border: 2px solid black;
+  overflow: hidden;
   background: sienna;
   background-size: cover;
+
+  background: rgba(255,175,75,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(131,68,41,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
 }
 
 .what-to-mine {
@@ -9,10 +21,12 @@
   left: 50%;
   transform: translateX(-50%);
   height: 10vh;
-  width: 99%;
   outline: none;
-  font-size: 2vw;
+  font-size: 3vw;
   border-radius: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .ore-image {

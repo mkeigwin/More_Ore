@@ -497,9 +497,9 @@ template {
   color: white;
   background: red;
 }
-section {
+section.left-section {
   position: relative;
-  width: 33%;
+  width: 30%;
   height: 99%;
   border: 2px solid black;
   background: white;
@@ -592,10 +592,22 @@ section {
   background-color: #CCC;
   border-color: rgba(0,0,0,0.9);
 }
-.middle-section {
-  /*background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");*/
+section.middle-section {
+  position: relative;
+  width: 39%;
+  height: 99%;
+  border: 2px solid black;
+  overflow: hidden;
   background: sienna;
   background-size: cover;
+
+  background: rgba(255,175,75,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(131,68,41,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%);
 }
 
 .what-to-mine {
@@ -603,10 +615,12 @@ section {
   left: 50%;
   transform: translateX(-50%);
   height: 10vh;
-  width: 99%;
   outline: none;
-  font-size: 2vw;
+  font-size: 3vw;
   border-radius: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .ore-image {
@@ -635,6 +649,15 @@ section {
   font-size: 20px;
   text-align: center;
 }
+section.right-section {
+  position: relative;
+  width: 30%;
+  height: 99%;
+  border: 2px solid black;
+  background: white;
+  overflow: hidden;
+}
+
 .right-section-tabs {
   position: relative;
   width: 100%;
@@ -696,7 +719,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   outline: none;
-  font-size: 2vw;
+  font-size: 1.5vw;
   cursor: pointer;
   text-align: center;
 
@@ -754,8 +777,8 @@ section {
   left: 50%;
   transform: translateX(-50%);
   bottom: 2%;
-  height: 18vw;
-  width: 70vw;
+  height: 13vw;
+  width: 60vw;
   background: antiquewhite;
   border: 2px solid black;
   z-index: 3;
@@ -764,24 +787,24 @@ section {
 
 .upgrade-modal h1 {
   border-bottom: 2px solid black;
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin: 0;
   padding: 0;
 }
 
 .upgrade-modal h3 {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 .upgrade-modal h4 {
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .upgrade-modal p {
   position: absolute;
   width: 100%;
   bottom: 0;
-  font-size: 2vw;
+  font-size: 1.5vw;
   border-top: 2px solid black;
 }
 .furnace-modal {

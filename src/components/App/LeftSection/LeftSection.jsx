@@ -67,7 +67,7 @@ class LeftSection extends React.Component {
             <h1>Stats</h1>
             <br />
             <p>Ores Per Click: <span>{this.props.orePerClick}</span></p>
-            <p>Smelt Speed: <span>{this.props.smeltTimer.toFixed(1)}s/ore</span></p>
+            <p>Smelt Speed: <span>{this.props.smeltTimer}s/ore</span></p>
             <br />
             <p>Bronze Ore Per Second: <span>0</span></p>
             <p>Iron Ore Per Second: <span>0</span></p>

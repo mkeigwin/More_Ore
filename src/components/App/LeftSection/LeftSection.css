@@ -1,6 +1,6 @@
-section {
+section.left-section {
   position: relative;
-  width: 33%;
+  width: 30%;
   height: 99%;
   border: 2px solid black;
   background: white;

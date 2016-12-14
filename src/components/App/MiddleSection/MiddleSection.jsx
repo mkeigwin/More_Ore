@@ -27,12 +27,15 @@ class MiddleSection extends React.Component {
   changeBackground() {
     let whatToMine = document.querySelector('.what-to-mine').value
     let middleSection = document.querySelector('.middle-section')
+
+    let gradient1 = 'radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(131,68,41,1) 100%)'
+    let gradient2 = 'radial-gradient(ellipse at center, #8e9eab , #eef2f3)'
+
     if (whatToMine === 'bOre') {
-      // middleSection.style.backgroundImage = 'url("http://i.imgur.com/TaLoXAG.jpg?1")'
-      middleSection.style.background = 'sienna'
+      middleSection.style.background = gradient1
     } else if (whatToMine === 'iOre') {
-      // middleSection.style.backgroundImage = 'url("http://www.ironminers.com/images/ironmines/ny-mine/ny-mine-19.jpg")'
-      middleSection.style.background = 'silver'
+      console.log('change')
+      middleSection.style.background = gradient2
     } else if (whatToMine === 'gOre') {
       middleSection.style.backgroundImage = 'url("http://static6.businessinsider.com/image/5643b7bd9dd7cc1a008c9289/chinese-scientists-found-a-literal-gold-mine-under-the-sea.jpg")'
     }

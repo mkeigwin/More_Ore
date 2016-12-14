@@ -5,8 +5,8 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 2%;
-  height: 18vw;
-  width: 70vw;
+  height: 13vw;
+  width: 60vw;
   background: antiquewhite;
   border: 2px solid black;
   z-index: 3;
@@ -15,23 +15,23 @@
 
 .upgrade-modal h1 {
   border-bottom: 2px solid black;
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin: 0;
   padding: 0;
 }
 
 .upgrade-modal h3 {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 .upgrade-modal h4 {
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .upgrade-modal p {
   position: absolute;
   width: 100%;
   bottom: 0;
-  font-size: 2vw;
+  font-size: 1.5vw;
   border-top: 2px solid black;
 }

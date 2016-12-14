@@ -97,7 +97,7 @@ class RightSection extends React.Component {
               onMouseOver={this.showPickaxeModal}
               onMouseOut={this.hidePickaxeModal}
               >
-              <h3>Sharpen Pickaxe</h3>
+              <h3>Sharpen Pickaxe lv.{this.props.pickaxeLv}</h3>
               <p>Cost: {this.props.pickaxeUpgradePrice} Refined Bronze</p>
             </button>
             <button
@@ -106,7 +106,7 @@ class RightSection extends React.Component {
               onMouseOver={this.showFurnaceUpgradeModal}
               onMouseOut={this.hideFurnaceUpgradeModal}
               >
-              <h3>Upgrade Furnace</h3>
+              <h3>Upgrade Furnace lv.{this.props.furnaceLv}</h3>
               <p>Cost: {this.props.furnaceUpgradePrice} Refined Bronze</p>
             </button>
             <button
@@ -115,7 +115,7 @@ class RightSection extends React.Component {
               onMouseOver={this.showReinforcePickaxeModal}
               onMouseOut={this.hideReinforcePickaxeModal}
               >
-              <h3>Reinfornce Pickaxe</h3>
+              <h3>Reinfornce Pickaxe lv.{this.props.reinforcedPickaxeLv}</h3>
               <p>Cost: 1000 Raw {this.props.reinforcedPickaxeCost}</p>
             </button>
             <button disabled>???</button>
