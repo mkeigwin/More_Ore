@@ -81,7 +81,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Save game automatically
+    // Save game automatically
     setInterval(() => {
       console.log('saving game')
       localStorage.setItem('orePerClick', this.state.orePerClick)
