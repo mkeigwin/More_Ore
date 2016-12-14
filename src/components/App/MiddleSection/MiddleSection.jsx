@@ -42,6 +42,7 @@ class MiddleSection extends React.Component {
   }
 
   render() {
+
     return(
       <section className='middle-section'>
 

@@ -39,7 +39,6 @@ class App extends Component {
       pickaxeUpgradePrice: 10,
       reinforcedPickaxeLv: 1,
       reinforcedPickaxeCost: 'Bronze',
-      unlockMineLv: 1,
 
       furnaceLv: 1,
       furnaceUpgradePrice: 15,
@@ -73,11 +72,9 @@ class App extends Component {
     localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice)
     localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv)
     localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost)
-    localStorage.setItem('unlockMineLv', this.state.unlockMineLv)
     localStorage.setItem('furnaceLv', this.state.furnaceLv)
     localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
     localStorage.setItem('smeltTimer', this.state.smeltTimer)
-    localStorage.setItem('savedBefore', this.state.savedBefore)
   }
 
   componentDidMount() {
@@ -101,11 +98,9 @@ class App extends Component {
       localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice)
       localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv)
       localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost)
-      localStorage.setItem('unlockMineLv', this.state.unlockMineLv)
       localStorage.setItem('furnaceLv', this.state.furnaceLv)
       localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
       localStorage.setItem('smeltTimer', this.state.smeltTimer)
-      localStorage.setItem('savedBefore', this.state.savedBefore)
     }, 5000)
 
     console.log('loading game')
@@ -128,11 +123,9 @@ class App extends Component {
       localStorage.setItem('pickaxeUpgradePrice', this.state.pickaxeUpgradePrice)
       localStorage.setItem('reinforcedPickaxeLv', this.state.reinforcedPickaxeLv)
       localStorage.setItem('reinforcedPickaxeCost', this.state.reinforcedPickaxeCost)
-      localStorage.setItem('unlockMineLv', this.state.unlockMineLv)
       localStorage.setItem('furnaceLv', this.state.furnaceLv)
       localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
       localStorage.setItem('smeltTimer', this.state.smeltTimer)
-      localStorage.setItem('savedBefore', this.state.savedBefore)
     } else {
       this.setState({
         orePerClick: parseFloat(localStorage.getItem('orePerClick')),
@@ -153,7 +146,6 @@ class App extends Component {
         pickaxeUpgradePrice: parseFloat(localStorage.getItem('pickaxeUpgradePrice')),
         reinforcedPickaxeLv: parseFloat(localStorage.getItem('reinforcedPickaxeLv')),
         reinforcedPickaxeCost: localStorage.getItem('reinforcedPickaxeCost'),
-        unlockMineLv: parseFloat(localStorage.getItem('unlockMineLv')),
 
         furnaceLv: parseFloat(localStorage.getItem('furnaceLv')),
         furnaceUpgradePrice: localStorage.getItem('furnaceUpgradePrice'),
@@ -361,7 +353,7 @@ class App extends Component {
 
   reinforcePickaxe() {
     console.log('reinforcePickaxe firing')
-    let whatToMine = document.querySelector('.what-to-mine').options[this.state.unlockMineLv]
+    let whatToMine = document.querySelector('.what-to-mine').options[this.state.reinforcedPickaxeLv]
     // console.log(whatToMine)
     if (this.state.reinforcedPickaxeCost === 'Bronze') {
       if (this.state.bOre >= 1000) {
@@ -369,13 +361,23 @@ class App extends Component {
         this.setState({
           bOre: this.state.bOre -= 1000,
           reinforcedPickaxeCost: 'Iron',
-          unlockMineLv: this.state.unlockMineLv += 1
+          reinforcedPickaxeLv: this.state.reinforcedPickaxeLv += 1
+        })
+      }
+    } else if (this.state.reinforcedPickaxeCost === 'Iron') {
+      if (this.state.iOre >= 1000) {
+        whatToMine.disabled = false
+        this.setState({
+          iOre: this.state.iOre -= 1000,
+          reinforcedPickaxeCost: 'Gold',
+          reinforcedPickaxeLv: this.state.reinforcedPickaxeLv += 1
         })
       }
     }
   }
 
-  render(){
+  render() {
+
     return (
       <div className='app-container'>
 
