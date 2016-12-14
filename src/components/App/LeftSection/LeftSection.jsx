@@ -82,6 +82,8 @@ class LeftSection extends React.Component {
             <p>Refined Diamond Per Second: <span>0</span></p>
           </div>
 
+        <button onClick={this.props.saveGame}className='save-game-button'>SAVE GAME</button>
+
         </div>
 
       </section>
