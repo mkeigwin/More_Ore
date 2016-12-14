@@ -24,7 +24,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "https://github.com/iSyn/More_Ore",
+  // "homepage": "https://github.com/iSyn/More_Ore",
   "dependencies": {
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
