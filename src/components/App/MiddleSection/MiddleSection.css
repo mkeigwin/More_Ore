@@ -1,5 +1,6 @@
 .middle-section {
-  background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");
+  /*background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");*/
+  background: sienna;
   background-size: cover;
 }
 

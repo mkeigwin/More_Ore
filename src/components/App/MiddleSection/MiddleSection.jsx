@@ -28,9 +28,11 @@ class MiddleSection extends React.Component {
     let whatToMine = document.querySelector('.what-to-mine').value
     let middleSection = document.querySelector('.middle-section')
     if (whatToMine === 'bOre') {
-      middleSection.style.backgroundImage = 'url("http://i.imgur.com/TaLoXAG.jpg?1")'
+      // middleSection.style.backgroundImage = 'url("http://i.imgur.com/TaLoXAG.jpg?1")'
+      middleSection.style.background = 'sienna'
     } else if (whatToMine === 'iOre') {
-      middleSection.style.backgroundImage = 'url("http://www.ironminers.com/images/ironmines/ny-mine/ny-mine-19.jpg")'
+      // middleSection.style.backgroundImage = 'url("http://www.ironminers.com/images/ironmines/ny-mine/ny-mine-19.jpg")'
+      middleSection.style.background = 'silver'
     } else if (whatToMine === 'gOre') {
       middleSection.style.backgroundImage = 'url("http://static6.businessinsider.com/image/5643b7bd9dd7cc1a008c9289/chinese-scientists-found-a-literal-gold-mine-under-the-sea.jpg")'
     }
