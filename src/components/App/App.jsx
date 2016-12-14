@@ -24,12 +24,12 @@ class App extends Component {
     this.state = {
       orePerClick: 1,
 
-      bOre: 9990,
+      bOre: 0,
       iOre: 0,
       gOre: 0,
       pOre: 0,
       dOre: 0,
-      r_bOre: 9990,
+      r_bOre: 0,
       r_iOre: 0,
       r_gOre: 0,
       r_pOre: 0,
