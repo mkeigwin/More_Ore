@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-  console.log('scripts.js is linked and DOM is loaded')
+  console.log('scripts.js connected')
 
   let leftSectionTab = document.querySelectorAll('.left-section-tab')
   let inventoryTabContent = document.querySelector('.left-section-tabs-content-inventory')
@@ -12,8 +12,45 @@ window.addEventListener('DOMContentLoaded', () => {
   let tavernTabContent = document.querySelector('.right-section-tabs-content-tavern')
   let questsTabContent = document.querySelector('.right-section-tabs-content-quests')
 
+  let upgradePickaxeButton = document.querySelector('.upgrade-pickaxe-button')
+  let buyFurnaceButton = document.querySelector('.buy-furnace-button')
+
+  let upgradePickaxeModal = document.querySelector('.upgrade-pickaxe-modal')
+  let buyFurnaceModal = document.querySelector('.buy-furnace-modal')
+
+  let closeMenu = document.querySelector('.close-menu')
+
+  let furnace1 = document.querySelector('#furnace1')
+  let furnace2 = document.querySelector('#furnace2')
+  let furnace1Modal = document.querySelector('.furnace1-modal')
+  let furnace2Modal = document.querySelector('.furnace2-modal')
+
+  let pageCover = document.querySelector('.page-cover')
+
   let oreImage = document.querySelector('.ore-image')
 
+
+
+  furnace2.addEventListener('click', () => {
+    pageCover.style.display = 'block'
+    furnace2Modal.style.display = 'block'
+  })
+
+  furnace1.addEventListener('click', () => {
+    pageCover.style.display = 'block'
+    furnace1Modal.style.display = 'block'
+  })
+
+  pageCover.addEventListener('click', () => {
+    pageCover.style.display = 'none'
+    furnace1Modal.style.display = 'none'
+    furnace2Modal.style.display = 'none'
+  })
+
+  closeMenu.addEventListener('click', () => {
+    pageCover.style.display = 'none'
+    furnace1Modal.style.display = 'none'
+  })
 
   leftSectionTab.forEach((tab) => {
     tab.addEventListener('click', (e) => {
@@ -75,6 +112,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   oreImage.addEventListener('mouseup', () => {
     oreImage.style.height = '21vw'
+  })
+
+  upgradePickaxeButton.addEventListener('mouseover', () => {
+    upgradePickaxeModal.style.display = 'block'
+  })
+
+  upgradePickaxeButton.addEventListener('mouseout', () => {
+    upgradePickaxeModal.style.display = 'none'
+  })
+
+  buyFurnaceButton.addEventListener('mouseover', () => {
+    buyFurnaceModal.style.display = 'block'
+  })
+
+  buyFurnaceButton.addEventListener('mouseout', () => {
+    buyFurnaceModal.style.display = 'none'
   })
 
 })

@@ -40,3 +40,123 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin buttons() {
+  position: relative;
+  height: 8vw;
+  width: 95%;
+  margin-top: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  border-left-width: 5px;
+  border-bottom-width: 5px;
+  font-size: 3vw;
+  cursor: pointer;
+  text-align: center;
+  p {
+    text-align: center;
+  }
+}
+
+@mixin small-modal {
+  text-align: center;
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2%;
+  height: 18vw;
+  width: 70vw;
+  background: antiquewhite;
+  border: $border-size;
+  z-index: 3;
+  box-shadow: 0 5px 5px black;
+  h1 {
+    border-bottom: $border-size;
+    font-size: 3vw;
+  }
+  h3 {
+    font-size: 3.5vw;
+  }
+  h4 {
+    font-size: 2.5vw;
+  }
+  p {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 2vw;
+    border-top: $border-size;
+  }
+}
+
+@mixin furnace-modal {
+  box-shadow: 0 5px 5px black;
+  display: none;
+  position: fixed;
+  @include centerAnything;
+  z-index: 3;
+  border: $border-size;
+  height: 50vh;
+  width: 50vw;
+  background: antiquewhite;
+  text-align: center;
+
+  p {
+    background-color: snow;
+    font-size: 3vw;
+  }
+  h1 {
+    border-bottom: $border-size;
+    font-size: 3vw;
+    .close-menu {
+      position: absolute;
+      right: 1%;
+      cursor: pointer;
+    }
+    .close-menu:hover {
+      color: grey;
+    }
+  }
+  h3 {
+    font-size: 2.5vw;
+  }
+  select {
+    font-size: 2vw;
+  }
+  .amount-to-make-container {
+    height: 3vw;
+    line-height: 3vw;
+
+    h2 {
+    display: inline-block;
+    font-size: 3vw;
+    padding: 0 1vw;
+    }
+
+    button {
+      // height: 3vw;
+      position: relative;
+      font-size: 2vw;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+  }
+  .smelt-button {
+    position: absolute;
+    bottom: 1%;
+    height: 5vw;
+    width: 99%;
+    font-size: 3vw;
+    transform: translateX(-50%)
+  }
+  .smelt-button-2 {
+    position: absolute;
+    bottom: 1%;
+    height: 5vw;
+    width: 99%;
+    font-size: 3vw;
+    transform: translateX(-50%)
+  }
+}

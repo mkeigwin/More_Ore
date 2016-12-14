@@ -13,6 +13,72 @@
 
     <div class="app-container">
 
+      <div class="page-cover"></div>
+
+      <div class="upgrade-pickaxe-modal">
+        <h1>Pickaxe lv.<span class='pickaxe-lv'>1</span></h1>
+        <h3>Increases the amount of ore you get per click by 1.5x</h3>
+        <h4>Pick harder! Pick faster! Pick stronger!</h4>
+        <p>Price: 10 Refined Bronze</p>
+      </div>
+
+      <div class="buy-furnace-modal">
+        <h1>More Furnaces!</h1>
+        <h3>Buy another furnace to smelt more ores!</h3>
+        <h4>SMELT! SMELT! SMELT!</h4>
+        <p>Price: 20 Refined Bronze</p>
+      </div>
+
+      <div class="furnace1-modal">
+        <h1>Furnace 1 <span class="close-menu">X</span></h1>
+        <p>10 raw ore makes 1 refined ore</p>
+        <h3>Select what type of ore to smelt</h3>
+        <select class='what-to-make'>
+          <option default value="bOre">Bronze Ore</option>
+          <option value="iOre">Iron Ore</option>
+          <option value="gOre">Gold Ore</option>
+          <option value="pOre">Platinum Ore</option>
+          <option value="dOre">Diamond Ore</option>
+        </select>
+        <h3>How many do you want to make?</h3>
+        <div class="amount-to-make-container">
+          <button class='subtract100'>-100</button>
+          <button class='subtract10'>-10</button>
+          <button class='subtract1'>-1</button>
+          <h2 class='amount-to-make'>0</h2>
+          <button class='add1'>+1</button>
+          <button class='add10'>+10</button>
+          <button class='add100'>+100</button>
+          <button class='addAll'>+++</button>
+        </div>
+        <button class='smelt-button'>SMELT</button>
+      </div>
+
+      <div class="furnace2-modal">
+        <h1>Furnace 2 <span class="close-menu">X</span></h1>
+        <p>10 raw ore makes 1 refined ore</p>
+        <h3>Select what type of ore to smelt</h3>
+        <select class='what-to-make'>
+          <option default value="bOre">Bronze Ore</option>
+          <option value="iOre">Iron Ore</option>
+          <option value="gOre">Gold Ore</option>
+          <option value="pOre">Platinum Ore</option>
+          <option value="dOre">Diamond Ore</option>
+        </select>
+        <h3>How many do you want to make?</h3>
+        <div class="amount-to-make-container">
+          <button class='subtract100'>-100</button>
+          <button class='subtract10'>-10</button>
+          <button class='subtract1'>-1</button>
+          <h2 class='amount-to-make'>0</h2>
+          <button class='add1'>+1</button>
+          <button class='add10'>+10</button>
+          <button class='add100'>+100</button>
+          <button class='addAll'>+++</button>
+        </div>
+        <button class='smelt-button-2'>SMELT</button>
+      </div>
+
       <section class='left-section'>
         <div class="left-section-tabs">
           <div class="left-section-tab selected" id='inventory'>Inventory</div>
@@ -75,14 +141,42 @@
           <div class="right-section-tab" id='quests'>Quests</div>
         </div> <!-- right-section-tabs -->
         <div class="right-section-tabs-content">
-          <div class="right-section-tabs-content-upgrades">Upgrades</div>
-          <div class="right-section-tabs-content-furnace" style='display: none'>Furnace</div>
-          <div class="right-section-tabs-content-tavern" style='display: none'>Tavern</div>
-          <div class="right-section-tabs-content-quests" style='display: none'>Quests</div>
+          <div class="right-section-tabs-content-upgrades">
+            <h1>Upgrades here!</h1>
+            <button class='upgrade-pickaxe-button'>
+              <h3>Upgrade Pickaxe</h3>
+              <p>Cost: 10 Refined Bronze</p>
+            </button>
+            <button class='buy-furnace-button'>
+              <h3>Buy Extra Furnace</h3>
+              <p>Cost: 20 Refined Bronze</p>
+            </button>
+            <button disabled>???</button>
+            <button disabled>???</button>
+            <button disabled>???</button>
+            <button disabled>???</button>
+            <button disabled>???</button>
+            <button disabled>???</button>
+          </div>
+          <div class="right-section-tabs-content-furnace" style='display: none'>
+            <h1>Smelt your raw ores to refined ores!</h1>
+            <div class="furnace" id='furnace1'></div>
+            <div class="furnace" id='furnace2' style='display: none'></div>
+            <div class="furnace" id='furnace3' style='display: none'></div>
+            <div class="furnace" id='furnace4' style='display: none'></div>
+
+          </div>
+          <div class="right-section-tabs-content-tavern" style='display: none'>
+            <h1>Hire miners or heroes to do your bidding!</h1>
+          </div>
+          <div class="right-section-tabs-content-quests" style='display: none'>
+            <h1>Send your heroes off on quests for a chance of a Legendary item!</h1>
+          </div>
         </div>
       </section> <!-- right-section -->
     </div> <!-- app-container -->
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/game.js"></script>
 

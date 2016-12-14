@@ -19,6 +19,33 @@
   justify-content: space-around;
   align-items: center;
 
+  .upgrade-pickaxe-modal {
+    @include small-modal;
+  }
+
+  .buy-furnace-modal {
+    @include small-modal;
+  }
+
+  .page-cover {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .furnace1-modal {
+    @include furnace-modal;
+  }
+
+  .furnace2-modal {
+    @include furnace-modal;
+
+  }
+
+
   section.left-section {
     @include section;
 
@@ -110,6 +137,49 @@
         &:not(:last-child) {
           border-right: $border-size;
         }
+      }
+    }
+
+    .right-section-tabs-content {
+      position: absolute;
+      height: 90vh;
+      width: 100%;
+      overflow: auto;
+
+      &-upgrades {
+        @include tab-content;
+
+        button {
+          @include buttons;
+        }
+
+        button:hover {
+          opacity: 0.5;
+        }
+      }
+
+      &-furnace {
+        @include tab-content;
+
+        .furnace {
+          position: relative;
+          height: 15vw;
+          width: 15vw;
+          background-image: url('../assets/furnace_inactive.png');
+          background-size: contain;
+          left: 50%;
+          margin-top: 5%;
+          transform: translateX(-50%);
+          cursor: pointer;
+        }
+      }
+
+      &-tavern {
+        @include tab-content;
+      }
+
+      &-quests {
+        @include tab-content;
       }
     }
   }
