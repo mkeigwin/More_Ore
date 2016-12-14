@@ -13,6 +13,11 @@ class RightSection extends React.Component {
     let tavernTabContent = document.querySelector('.right-section-tabs-content-tavern')
     let questsTabContent = document.querySelector('.right-section-tabs-content-quests')
 
+    let upgradesTab = document.querySelector('#upgrades')
+    let furnaceTab = document.querySelector('#furnace')
+    let tavernTab = document.querySelector('#tavern')
+    let questsTab = document.querySelector('#quests')
+
     rightSectionTab.forEach((tab) => {
       tab.classList.remove('selected')
     })
@@ -24,21 +29,37 @@ class RightSection extends React.Component {
       furnaceTabContent.style.display = 'none'
       tavernTabContent.style.display = 'none'
       questsTabContent.style.display = 'none'
+      upgradesTab.style.background = 'white'
+      furnaceTab.style.background = 'lightgrey'
+      tavernTab.style.background = 'lightgrey'
+      questsTab.style.background = 'lightgrey'
     } else if (e.target.id === 'furnace') {
       upgradesTabContent.style.display = 'none'
       furnaceTabContent.style.display = 'block'
       tavernTabContent.style.display = 'none'
       questsTabContent.style.display = 'none'
+      upgradesTab.style.background = 'lightgrey'
+      furnaceTab.style.background = 'white'
+      tavernTab.style.background = 'lightgrey'
+      questsTab.style.background = 'lightgrey'
     } else if (e.target.id === 'tavern') {
       upgradesTabContent.style.display = 'none'
       furnaceTabContent.style.display = 'none'
       tavernTabContent.style.display = 'block'
       questsTabContent.style.display = 'none'
+      upgradesTab.style.background = 'lightgrey'
+      furnaceTab.style.background = 'lightgrey'
+      tavernTab.style.background = 'white'
+      questsTab.style.background = 'lightgrey'
     } else if (e.target.id === 'quests') {
       upgradesTabContent.style.display = 'none'
       furnaceTabContent.style.display = 'none'
       tavernTabContent.style.display = 'none'
       questsTabContent.style.display = 'block'
+      upgradesTab.style.background = 'lightgrey'
+      furnaceTab.style.background = 'lightgrey'
+      tavernTab.style.background = 'lightgrey'
+      questsTab.style.background = 'white'
     }
   }
 

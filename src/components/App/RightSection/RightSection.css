@@ -7,6 +7,18 @@ section.right-section {
   overflow: hidden;
 }
 
+#furnace {
+  background: lightgrey;
+}
+
+#tavern {
+  background: lightgrey;
+}
+
+#quests {
+  background: lightgrey;
+}
+
 .right-section-tabs {
   position: relative;
   width: 100%;

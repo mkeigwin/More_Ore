@@ -10,6 +10,8 @@ class LeftSection extends React.Component {
     let leftSectionTab = document.querySelectorAll('.left-section-tab')
     let inventoryTabContent = document.querySelector('.left-section-tabs-content-inventory')
     let statsTabContent = document.querySelector('.left-section-tabs-content-stats')
+    let inventoryTab = document.querySelector('#inventory')
+    let statsTab = document.querySelector('#stats')
 
     leftSectionTab.forEach((tab) => {
       tab.classList.remove('selected')
@@ -21,10 +23,14 @@ class LeftSection extends React.Component {
       console.log('inventory selected')
       inventoryTabContent.style.display = 'block'
       statsTabContent.style.display = 'none'
+      inventoryTab.style.backgroundColor = 'white'
+      statsTab.style.backgroundColor = 'lightgrey'
     } else {
       console.log('stats selected')
       inventoryTabContent.style.display = 'none'
       statsTabContent.style.display = 'block'
+      inventoryTab.style.backgroundColor = 'lightgrey'
+      statsTab.style.backgroundColor = 'white'
     }
   }
 

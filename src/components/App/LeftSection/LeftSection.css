@@ -63,6 +63,10 @@ section.left-section {
   border-bottom: none !important;
 }
 
+#stats {
+  background-color: lightgrey;
+}
+
 .save-game-button {
   position: absolute;
   bottom: 4%;
