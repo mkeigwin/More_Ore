@@ -1,0 +1,72 @@
+.furnace-modal {
+  box-shadow: 0 5px 5px black;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: 1px solid black;
+  height: 50vh;
+  width: 50vw;
+  background: antiquewhite;
+  text-align: center;
+}
+
+.furnace-modal p {
+  background-color: snow;
+  font-size: 3vw;
+}
+
+.furnace-modal h1 {
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid black;
+  font-size: 3vw;
+}
+
+.furnace-modal h3 {
+  font-size: 2.5vw;
+}
+
+.furnace-modal select {
+  font-size: 2vw;
+}
+
+.amount-to-make-container {
+  height: 3vw;
+  line-height: 3vw;
+}
+
+.amount-to-make-container h2 {
+  display: inline-block;
+  font-size: 3vw;
+  padding: 0 1vw;
+}
+
+.amount-to-make-container button {
+  position: relative;
+  font-size: 2vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.smelt-button {
+  position: absolute;
+  bottom: 1%;
+  height: 5vw;
+  width: 99%;
+  font-size: 3vw;
+  transform: translateX(-50%);
+}
+
+.close-menu {
+  position: absolute;
+  right: 1%;
+  cursor: pointer;
+}
+
+.close-menu:hover {
+  opacity: 0.5;
+}
+

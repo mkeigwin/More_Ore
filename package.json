@@ -1,34 +1,52 @@
 {
-  "name": "more_ore",
+  "name": "More Ore",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "clean": "rm -rf dist && rm -rf node_modules",
+    "heroku-prebuild": "scripts/deployment_react.sh",
+    "heroku-postbuild": "scripts/deployment_cleanup.sh",
+    "start": "node server.js",
+    "rebuild": "webpack -d --progress --colors",
+    "watch": "webpack -d --progress --watch"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iSyn/More_Ore.git"
+    "type": "",
+    "url": ""
   },
   "author": "Synclair Wang",
-  "license": "ISC",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/iSyn/More_Ore/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/iSyn/More_Ore#readme",
+  "homepage": "https://github.com/iSyn/More_Ore",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "pg-promise": "^5.2.7"
   },
   "devDependencies": {
-    "react-scripts": "0.8.4",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.0.0"
+    "babel": "^6.5.2",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-strict-mode": "^6.11.3",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "dotenv": "^2.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "html-webpack-template": "^5.0.0",
+    "postcss-loader": "^1.1.1",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
   }
 }

@@ -1,0 +1,98 @@
+.right-section-tabs {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.right-section-tab {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  font-size: 1.5vw;
+  height: 100%;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.right-section-tab:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+.right-section-tabs-content {
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.right-section-tab-content h1 {
+  text-align: center;
+  border-bottom: 2px solid black;
+  font-size: 2vw;
+}
+
+.right-section-tabs-content-furnace {
+  display: none;
+}
+
+.right-section-tabs-content-tavern {
+  display: none;
+}
+
+.right-section-tabs-content-quests {
+  display: none;
+}
+
+.right-section-tabs-content-upgrades button {
+  position: relative;
+  height: 8vw;
+  width: 95%;
+  margin-top: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  border-left-width: 5px;
+  border-bottom-width: 5px;
+  font-size: 3vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+.right-section-tabs-content-upgrades button:hover {
+  opacity: .7;
+}
+
+.right-section-tabs-content-upgrades button p {
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.furnace {
+  position: relative;
+  height: 20vw;
+  width: 20vw;
+  background-image: url('../../../assets/furnace_inactive.png');
+  background-size: contain;
+  left: 50%;
+  margin-top: 5%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

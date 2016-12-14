@@ -1,0 +1,64 @@
+section {
+  position: relative;
+  width: 33%;
+  height: 99%;
+  border: 2px solid black;
+  background: white;
+  overflow: hidden;
+}
+
+.left-section-tabs {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.left-section-tab {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  font-size: 3vw;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.left-section-tab:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+.left-section-tabs-content {
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.left-section-tab-content h1{
+  text-align: center;
+  border-bottom: 2px solid black;
+  font-size: 2vw;
+}
+
+.left-section-tab-content p{
+  text-align: left;
+  font-size: 1.5vw;
+  padding: 0 5px;
+}
+
+.left-section-tab-content p span {
+  float: right;
+}
+
+.left-section-tabs-content-stats {
+  display: none;
+}
+
+.selected {
+  border-bottom: none !important;
+}

@@ -1,0 +1,42 @@
+.middle-section {
+  background-image: url("http://i.imgur.com/TaLoXAG.jpg?1");
+  background-size: cover;
+}
+
+.what-to-mine {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10vh;
+  width: 99%;
+  outline: none;
+  font-size: 2vw;
+  border-radius: 0;
+}
+
+.ore-image {
+  position: absolute;
+  height: 20vw;
+  width: auto;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pops {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.pop {
+  font-weight: bold;
+  color: white;
+  width: 200px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
