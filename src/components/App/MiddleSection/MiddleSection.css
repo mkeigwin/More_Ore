@@ -20,8 +20,8 @@ section.middle-section {
 
 .what-to-mine {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 55%;
+  transform: translateX(-55%);
   height: 10vh;
   outline: none;
   font-size: 3vw;
@@ -56,21 +56,37 @@ select option {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.pops {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 10000;
-  pointer-events: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .pop {
-  font-weight: bold;
+  position: fixed;
   color: white;
-  width: 200px;
-  height: 20px;
-  font-size: 20px;
-  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+  z-index: 99;
+  cursor: pointer;
+
+  animation-name: moveUp;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
+

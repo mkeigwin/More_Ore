@@ -425,6 +425,7 @@ class App extends Component {
         />
 
         <MiddleSection
+          orePerClick={this.state.orePerClick}
           addOre={this.addOre.bind(this)}
         />
 

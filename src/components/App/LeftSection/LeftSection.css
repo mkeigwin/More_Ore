@@ -42,6 +42,7 @@ section.left-section {
 .left-section-tab-content h1{
   text-align: center;
   border-bottom: 2px solid black;
+  font-family: 'PT Sans Narrow';
   font-size: 2vw;
 }
 

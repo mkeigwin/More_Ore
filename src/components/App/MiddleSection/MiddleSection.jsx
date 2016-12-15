@@ -41,8 +41,42 @@ class MiddleSection extends React.Component {
     }
   }
 
-  render() {
+  showNumber(e) {
+    console.log('showNumber firing')
+    // Gets a random number between 1-100, then subtract 50
+    // So the final value would be a number between -50 and 50
+    let randomNumber = Math.floor(Math.random() * 101) - 50;
 
+    let pops = document.querySelector('.pops')
+    let currentX = e.pageX+(randomNumber)
+    let currentY = e.pageY-70
+    console.log(currentY, currentX)
+
+
+
+    let newDiv = document.createElement('div')
+    newDiv.classList.add('pop')
+    newDiv.innerHTML = `+${this.props.orePerClick}`
+    // newDiv.style.position = 'fixed'
+    newDiv.style.left = `${currentX}px`
+    newDiv.style.top = `${currentY}px`
+    pops.append(newDiv)
+
+    let allPops = document.querySelectorAll('.pop')
+    allPops.forEach((singlePop) => {
+      setTimeout(() => {
+        singlePop.remove()
+      }, 0.8 * 1000) //MAKE SURE SECONDS ARE LESS THAN CSS
+    })
+
+  }
+
+  handleClick(e) {
+    this.props.addOre();
+    this.showNumber(e)
+  }
+
+  render() {
     return(
       <section className='middle-section'>
 
@@ -54,15 +88,18 @@ class MiddleSection extends React.Component {
           <option disabled value="dOre">Diamond Mine</option>
         </select>
 
+        <div className="pops"></div>
+
         <img
           className='ore-image'
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
           onMouseDown={this.mouseDown}
           onMouseUp={this.mouseUp}
-          onClick={this.props.addOre}
+          onClick={ (e) => this.handleClick(e)}
           src={oreImage}
-          alt="ore" />
+          alt="ore"
+          />
       </section>
     )
   }

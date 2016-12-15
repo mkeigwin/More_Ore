@@ -55,6 +55,7 @@ section.right-section {
   text-align: center;
   border-bottom: 2px solid black;
   font-size: 2vw;
+  font-family: 'PT Sans Narrow';
 }
 
 .right-section-tabs-content-furnace {
