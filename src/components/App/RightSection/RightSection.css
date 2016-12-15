@@ -70,7 +70,7 @@ section.right-section {
   display: none;
 }
 
-.right-section-tabs-content-upgrades button {
+button {
   position: relative;
   /*height: 8vw;*/
   /*width: 95%;*/
@@ -93,20 +93,23 @@ section.right-section {
   border-bottom-width: 3px;
 }
 
-.right-section-tabs-content-upgrades button:hover {
+button:hover {
     background-color: #e3e3e3;
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-.right-section-tabs-content-upgrades button:active {
+button:active {
   background-color: #CCC;
   border-color: rgba(0,0,0,0.9);
 }
 
-.right-section-tabs-content-upgrades button p {
-  text-align: center;
+button p {
+  text-align: center !important;
   font-size: 1.5vw;
 }
+
+
+
 
 .furnace {
   position: relative;
@@ -120,11 +123,15 @@ section.right-section {
   cursor: pointer;
 }
 
+.right-section-tabs-content-tavern p{
+  text-align: left;
+  font-size: 1.5vw;
+  padding: 0 5px;
+}
 
-
-
-
-
+.right-section-tabs-content-tavern p span {
+  float: right;
+}
 
 
 

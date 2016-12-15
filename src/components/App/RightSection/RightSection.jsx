@@ -100,6 +100,18 @@ class RightSection extends React.Component {
     reinforcePickaxeModal.style.display = 'none'
   }
 
+
+  showHireMinerModal() {
+    let hireMinerModal = document.querySelector('.hire-miner-modal')
+    hireMinerModal.style.display = 'block'
+  }
+
+  hideHireMinerModal() {
+    let hireMinerModal = document.querySelector('.hire-miner-modal')
+    hireMinerModal.style.display = 'none'
+  }
+
+
   render() {
     return(
       <section className='right-section'>
@@ -152,7 +164,31 @@ class RightSection extends React.Component {
             <div onClick={this.showFurnaceModal} className='furnace'></div>
           </div>
           <div className="right-section-tab-content right-section-tabs-content-tavern">
+            <h1>Current Workers</h1>
+            <p>Amount of Idle Miners: <span>{this.props.totalMinerAmount}</span></p>
+            <p>Amount of Idle Heroes: <span>0</span></p>
             <h1>Hire miners or heroes to do your bidding!</h1>
+            <button
+              className='hire-miner-button'
+              onClick={this.props.hireMiner}
+              onMouseOver={this.showHireMinerModal}
+              onMouseOut={this.hideHireMinerModal}
+              >
+              <h3>Hire Miner</h3>
+              <p>Cost: {this.props.hireMinerPrice} Refined Bronze</p>
+            </button>
+            <button
+              className='hire-smelter-button'
+              >
+              <h3>Hire Smelter</h3>
+              <p>Cost: 10 Refined Iron</p>
+            </button>
+            <button
+              className='hire-hero-button'
+              >
+              <h3>Hire Hero</h3>
+              <p>Cost: 10 Refined Gold</p>
+            </button>
           </div>
           <div className="right-section-tab-content right-section-tabs-content-quests">
             <h1>Send your heroes off on quests for a chance of a Legendary item!</h1>

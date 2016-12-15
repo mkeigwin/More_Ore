@@ -48,11 +48,11 @@ class LeftSection extends React.Component {
             <br />
             <h1>Raw Ores</h1>
             <br />
-            <p>Bronze Ore: <span >{this.props.bOre}</span></p>
-            <p>Iron Ore: <span >{this.props.iOre}</span></p>
-            <p>Gold Ore: <span >{this.props.gOre}</span></p>
-            <p>Platinum Ore: <span >{this.props.pOre}</span></p>
-            <p>Diamond Ore: <span >{this.props.dOre}</span></p>
+            <p>Bronze Ore: <span>{this.props.bOre}</span></p>
+            <p>Iron Ore: <span>{this.props.iOre}</span></p>
+            <p>Gold Ore: <span>{this.props.gOre}</span></p>
+            <p>Platinum Ore: <span>{this.props.pOre}</span></p>
+            <p>Diamond Ore: <span>{this.props.dOre}</span></p>
             <br />
             <h1>Refined Ores</h1>
             <br />
@@ -64,7 +64,7 @@ class LeftSection extends React.Component {
             <br />
             <h1>Workers</h1>
             <br />
-            <p>Miner: <span>0</span></p>
+            <p>Miner: <span>{this.props.totalMinerAmount}</span></p>
             <p>Hero: <span>0</span></p>
           </div>
 

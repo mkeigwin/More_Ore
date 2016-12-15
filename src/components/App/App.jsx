@@ -10,6 +10,7 @@ import RightSection from './RightSection/RightSection.jsx'
 import UpgradePickaxeModal from '../Modals/UpgradeModals/UpgradePickaxeModal.jsx'
 import UpgradeFurnaceModal from '../Modals/UpgradeModals/UpgradeFurnaceModal.jsx'
 import ReinforcePickaxeModal from '../Modals/UpgradeModals/ReinforcePickaxeModal.jsx'
+import HireMinerModal from '../Modals/UpgradeModals/HireMinerModal.jsx'
 import FurnaceModal from '../Modals/FurnaceModal/FurnaceModal.jsx'
 
 import furnaceActive  from '../../assets/furnace_active.png'
@@ -24,12 +25,12 @@ class App extends Component {
     this.state = {
       orePerClick: 1,
 
-      bOre: 0,
+      bOre: 1000,
       iOre: 0,
       gOre: 0,
       pOre: 0,
       dOre: 0,
-      r_bOre: 0,
+      r_bOre: 1000,
       r_iOre: 0,
       r_gOre: 0,
       r_pOre: 0,
@@ -42,6 +43,11 @@ class App extends Component {
 
       furnaceLv: 1,
       furnaceUpgradePrice: 15,
+
+      totalMinerAmount: 0,
+      totalMinerIdle: 0,
+      hireMinerPrice: 5,
+
 
       isSmelting: false,
       smeltTimer: 2,
@@ -376,6 +382,17 @@ class App extends Component {
     }
   }
 
+  hireMiner() {
+    console.log('hireMiner firing')
+    if (this.state.r_bOre >= this.state.hireMinerPrice) {
+      this.setState({
+        r_bOre: this.state.r_bOre -= this.state.hireMinerPrice,
+        totalMinerAmount: this.state.totalMinerAmount += 1,
+        hireMinerPrice: this.state.hireMinerPrice += 2,
+      })
+    }
+  }
+
   render() {
 
     return (
@@ -392,6 +409,10 @@ class App extends Component {
         <UpgradeFurnaceModal
           furnaceLv={this.state.furnaceLv}
           furnaceUpgradePrice={this.state.furnaceUpgradePrice}
+        />
+        <HireMinerModal
+          totalMinerAmount={this.state.totalMinerAmount}
+          hireMinerPrice={this.state.hireMinerPrice}
         />
 
         <FurnaceModal
@@ -422,6 +443,7 @@ class App extends Component {
           r_dOre={this.state.r_dOre}
           smeltTimer={this.state.smeltTimer}
           saveGame={this.saveGame.bind(this)}
+          totalMinerAmount={this.state.totalMinerAmount}
         />
 
         <MiddleSection
@@ -441,6 +463,11 @@ class App extends Component {
           reinforcedPickaxeLv={this.state.reinforcedPickaxeLv}
           reinforcePickaxe={this.reinforcePickaxe.bind(this)}
           reinforcedPickaxeCost={this.state.reinforcedPickaxeCost}
+          //
+          hireMiner={this.hireMiner.bind(this)}
+          hireMinerPrice={this.state.hireMinerPrice}
+          //
+          totalMinerAmount={this.state.totalMinerAmount}
         />
 
       </div>
