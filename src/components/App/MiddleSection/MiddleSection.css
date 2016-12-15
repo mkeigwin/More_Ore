@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
 section.middle-section {
   position: relative;
   width: 39%;
@@ -23,10 +25,27 @@ section.middle-section {
   height: 10vh;
   outline: none;
   font-size: 3vw;
+  text-decoration: underline;
+  font-family: 'VT323';
   border-radius: 0;
   background-color: transparent;
   color: white;
   border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+
+  cursor: pointer;
+}
+
+.what-to-mine:hover {
+  color: silver;
+}
+
+select option {
+  font-size: 3vw;
 }
 
 .ore-image {
