@@ -49,7 +49,7 @@ class MiddleSection extends React.Component {
 
     let pops = document.querySelector('.pops')
     let currentX = e.pageX+(randomNumber)
-    let currentY = e.pageY-70
+    let currentY = e.pageY-100
     console.log(currentY, currentX)
 
 

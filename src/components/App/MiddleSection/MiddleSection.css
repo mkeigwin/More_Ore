@@ -63,7 +63,7 @@ select option {
 
 .pop {
   position: fixed;
-  color: white;
+  color: #222;
   font-size: 5vw;
   font-weight: bold;
   z-index: 99;
@@ -85,7 +85,7 @@ select option {
     opacity: 1;
   }
   100% {
-    transform: translateY(-300px);
+    transform: translateY(-200px);
     opacity: 0;
   }
 }
