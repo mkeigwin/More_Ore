@@ -48,7 +48,8 @@
   position: relative;
   font-size: 2vw;
   top: 50%;
-  transform: translateY(-50%);
+  height: initial;
+  width: initial;
 }
 
 .smelt-button {
