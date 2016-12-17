@@ -8,7 +8,7 @@ class UpgradeFurnaceModal extends React.Component {
         <h1>🔥Furnace lv.{this.props.furnaceLv}</h1>
         <h3>Increase Smelting Speed by 1.5x</h3>
         <h4>Fight fire with more fire! <br /> 🔥🔥🔥</h4>
-        <p>Price: {this.props.furnaceUpgradePrice} Refined Bronze</p>
+        <p>Price: {parseFloat(this.props.furnaceUpgradePrice).toFixed(1)} Refined Bronze</p>
       </div>
     )
   }

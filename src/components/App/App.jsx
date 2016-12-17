@@ -48,7 +48,6 @@ class App extends Component {
       totalMinerIdle: 0,
       hireMinerPrice: 5,
 
-
       isSmelting: false,
       smeltTimer: 2,
       amountToMake: 0,
@@ -81,6 +80,10 @@ class App extends Component {
     localStorage.setItem('furnaceLv', this.state.furnaceLv)
     localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
     localStorage.setItem('smeltTimer', this.state.smeltTimer)
+    //
+    localStorage.setItem('totalMinerAmount', this.state.totalMinerAmount)
+    localStorage.setItem('totalMinerIdle', this.state.totalMinerIdle)
+    localStorage.setItem('hireMinerPrice', this.state.hireMinerPrice)
   }
 
   componentDidMount() {
@@ -108,6 +111,10 @@ class App extends Component {
       localStorage.setItem('furnaceLv', this.state.furnaceLv)
       localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
       localStorage.setItem('smeltTimer', this.state.smeltTimer)
+      //
+      localStorage.setItem('totalMinerAmount', this.state.totalMinerAmount)
+      localStorage.setItem('totalMinerIdle', this.state.totalMinerIdle)
+      localStorage.setItem('hireMinerPrice', this.state.hireMinerPrice)
     }, 5000)
 
     console.log('loading game')
@@ -133,6 +140,10 @@ class App extends Component {
       localStorage.setItem('furnaceLv', this.state.furnaceLv)
       localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
       localStorage.setItem('smeltTimer', this.state.smeltTimer)
+      //
+      localStorage.setItem('totalMinerAmount', this.state.totalMinerAmount)
+      localStorage.setItem('totalMinerIdle', this.state.totalMinerIdle)
+      localStorage.setItem('hireMinerPrice', this.state.hireMinerPrice)
     } else {
 
       setTimeout(() => {
@@ -172,6 +183,11 @@ class App extends Component {
         furnaceUpgradePrice: localStorage.getItem('furnaceUpgradePrice'),
 
         smeltTimer: localStorage.getItem('smeltTimer'),
+
+        totalMinerAmount: parseInt(localStorage.getItem('totalMinerAmount')),
+        totalMinerIdle: parseInt(localStorage.getItem('totalMinerIdle')),
+        hireMinerPrice: parseInt(localStorage.getItem('hireMinerPrice'))
+
       })
     }
   }
@@ -347,7 +363,6 @@ class App extends Component {
         pickaxeLv: this.state.pickaxeLv += 1,
         pickaxeUpgradePrice: this.state.pickaxeUpgradePrice *= 1.5,
         orePerClick: (this.state.orePerClick *= 1.5),
-
       })
     }
   }
