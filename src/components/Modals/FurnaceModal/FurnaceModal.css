@@ -6,7 +6,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  border: 1px solid black;
+  border: 2px solid black;
   height: 50vh;
   width: 50vw;
   background: antiquewhite;
@@ -59,7 +59,29 @@
   width: 99%;
   font-size: 3vw;
   transform: translateX(-50%);
+
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+
+  color: #222;
+  background-color: #eee;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom-width: 3px;
 }
+
+.smelt-button:hover {
+  background-color: #e3e3e3;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.smelt-button:active {
+  background-color: #CCC;
+  border-color: rgba(0,0,0,0.9);
+}
+
 
 .close-menu {
   position: absolute;

@@ -8,7 +8,7 @@ class UpgradePickaxeModal extends React.Component {
         <h1>⛏Pickaxe lv.{this.props.pickaxeLv}</h1>
         <h3>Increases Ore Per Click by 1.5x</h3>
         <h4>Pick harder! Pick faster! Pick stronger!</h4>
-        <p>Price: {this.props.pickaxeUpgradePrice} Refined Bronze</p>
+        <p>Price: {this.props.pickaxeUpgradePrice.toFixed(1)} Refined Bronze</p>
       </div>
     )
   }

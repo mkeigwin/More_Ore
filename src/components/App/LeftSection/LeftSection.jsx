@@ -35,6 +35,8 @@ class LeftSection extends React.Component {
   }
 
   render() {
+    console.log(this)
+
     return(
       <section className='left-section'>
 
@@ -48,19 +50,19 @@ class LeftSection extends React.Component {
             <br />
             <h1>Raw Ores</h1>
             <br />
-            <p>Bronze Ore: <span>{this.props.bOre}</span></p>
-            <p>Iron Ore: <span>{this.props.iOre}</span></p>
-            <p>Gold Ore: <span>{this.props.gOre}</span></p>
-            <p>Platinum Ore: <span>{this.props.pOre}</span></p>
-            <p>Diamond Ore: <span>{this.props.dOre}</span></p>
+            <p>Bronze Ore: <span>{this.props.bOre.toFixed(1)}</span></p>
+            <p>Iron Ore: <span>{this.props.iOre.toFixed(1)}</span></p>
+            <p>Gold Ore: <span>{this.props.gOre.toFixed(1)}</span></p>
+            <p>Platinum Ore: <span>{this.props.pOre.toFixed(1)}</span></p>
+            <p>Diamond Ore: <span>{this.props.dOre.toFixed(1)}</span></p>
             <br />
             <h1>Refined Ores</h1>
             <br />
-            <p>Refined Bronze: <span>{this.props.r_bOre}</span></p>
-            <p>Refined Iron: <span>{this.props.r_iOre}</span></p>
-            <p>Refined Gold: <span>{this.props.r_gOre}</span></p>
-            <p>Refined Platinum: <span>{this.props.r_pOre}</span></p>
-            <p>Refined Diamond: <span>{this.props.r_dOre}</span></p>
+            <p>Refined Bronze: <span>{this.props.r_bOre.toFixed(1)}</span></p>
+            <p>Refined Iron: <span>{this.props.r_iOre.toFixed(1)}</span></p>
+            <p>Refined Gold: <span>{this.props.r_gOre.toFixed(1)}</span></p>
+            <p>Refined Platinum: <span>{this.props.r_pOre.toFixed(1)}</span></p>
+            <p>Refined Diamond: <span>{this.props.r_dOre.toFixed(1)}</span></p>
             <br />
             <h1>Workers</h1>
             <br />
@@ -72,8 +74,8 @@ class LeftSection extends React.Component {
             <br />
             <h1>Stats</h1>
             <br />
-            <p>Ores Per Click: <span>{this.props.orePerClick}</span></p>
-            <p>Smelt Speed: <span>{this.props.smeltTimer}s/ore</span></p>
+            <p>Ores Per Click: <span>{this.props.orePerClick.toFixed(1)}</span></p>
+            <p>Smelt Speed: <span>{parseFloat(this.props.smeltTimer).toFixed(1)}s/ore</span></p>
             <br />
             <p>Bronze Ore Per Second: <span>0</span></p>
             <p>Iron Ore Per Second: <span>0</span></p>

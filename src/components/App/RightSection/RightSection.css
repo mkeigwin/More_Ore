@@ -70,7 +70,7 @@ section.right-section {
   display: none;
 }
 
-button {
+.right-section-tab-content button {
   position: relative;
   /*height: 8vw;*/
   /*width: 95%;*/
@@ -93,17 +93,17 @@ button {
   border-bottom-width: 3px;
 }
 
-button:hover {
+.right-section-tab-content button:hover {
     background-color: #e3e3e3;
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-button:active {
+.right-section-tab-content button:active {
   background-color: #CCC;
   border-color: rgba(0,0,0,0.9);
 }
 
-button p {
+.right-section-tab-content button p {
   text-align: center !important;
   font-size: 1.5vw;
 }

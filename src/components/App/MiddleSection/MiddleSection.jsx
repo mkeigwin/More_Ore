@@ -52,11 +52,9 @@ class MiddleSection extends React.Component {
     let currentY = e.pageY-100
     console.log(currentY, currentX)
 
-
-
     let newDiv = document.createElement('div')
     newDiv.classList.add('pop')
-    newDiv.innerHTML = `+${this.props.orePerClick}`
+    newDiv.innerHTML = `+${this.props.orePerClick.toFixed(1)}`
     // newDiv.style.position = 'fixed'
     newDiv.style.left = `${currentX}px`
     newDiv.style.top = `${currentY}px`

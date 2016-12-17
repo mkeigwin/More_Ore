@@ -131,7 +131,7 @@ class RightSection extends React.Component {
               onMouseOut={this.hidePickaxeModal}
               >
               <h3>Sharpen Pickaxe lv.{this.props.pickaxeLv}</h3>
-              <p>Cost: {this.props.pickaxeUpgradePrice} Refined Bronze</p>
+              <p>Cost: {this.props.pickaxeUpgradePrice.toFixed(1)} Refined Bronze</p>
             </button>
             <button
               className='upgrade-furnace-button'
