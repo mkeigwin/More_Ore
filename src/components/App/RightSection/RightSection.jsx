@@ -111,7 +111,6 @@ class RightSection extends React.Component {
     hireMinerModal.style.display = 'none'
   }
 
-
   render() {
     return(
       <section className='right-section'>
@@ -125,7 +124,7 @@ class RightSection extends React.Component {
           <div className="right-section-tab-content right-section-tabs-content-upgrades">
             <h1>Upgrades here!</h1>
             <button
-              className='upgrade-pickaxe-button'
+              className='hire-button upgrade-pickaxe-button'
               onClick={this.props.upgradePickaxe}
               onMouseOver={this.showPickaxeModal}
               onMouseOut={this.hidePickaxeModal}
@@ -134,7 +133,7 @@ class RightSection extends React.Component {
               <p>Cost: {this.props.pickaxeUpgradePrice.toFixed(1)} Refined Bronze</p>
             </button>
             <button
-              className='upgrade-furnace-button'
+              className='hire-button upgrade-furnace-button'
               onClick={this.props.upgradeFurnace}
               onMouseOver={this.showFurnaceUpgradeModal}
               onMouseOut={this.hideFurnaceUpgradeModal}
@@ -143,7 +142,7 @@ class RightSection extends React.Component {
               <p>Cost: {parseFloat(this.props.furnaceUpgradePrice).toFixed(1)} Refined Bronze</p>
             </button>
             <button
-              className='reinforce-pickaxe-button'
+              className='hire-button reinforce-pickaxe-button'
               onClick={this.props.reinforcePickaxe}
               onMouseOver={this.showReinforcePickaxeModal}
               onMouseOut={this.hideReinforcePickaxeModal}
@@ -151,12 +150,9 @@ class RightSection extends React.Component {
               <h3>Reinfornce Pickaxe lv.{this.props.reinforcedPickaxeLv}</h3>
               <p>Cost: 1000 Raw {this.props.reinforcedPickaxeCost}</p>
             </button>
-            <button disabled>???</button>
-            <button disabled>???</button>
-            <button disabled>???</button>
-            <button disabled>???</button>
-            <button disabled>???</button>
-            <button disabled>???</button>
+            <button disabled className='hire-button'>???</button>
+            <button disabled className='hire-button'>???</button>
+            <button disabled className='hire-button'>???</button>
           </div>
 
           <div className="right-section-tab-content right-section-tabs-content-furnace">
@@ -167,9 +163,13 @@ class RightSection extends React.Component {
             <h1>Current Workers</h1>
             <p>Amount of Idle Miners: <span>{this.props.totalMinerAmount}</span></p>
             <p>Amount of Idle Heroes: <span>0</span></p>
+            <br/>
+            <p>Bronze Mine <span><button className='minusMinerFromMine'>-</button>0<button onClick={e => this.props.addMiner(e)} className='addMinerToMine addToBronze'>+</button></span></p>
+            <p>Iron Mine <span><button className='minusMinerFromMine'>-</button>0<button onClick={e => this.props.addMiner(e)} className='addMinerToMine addToIron'>+</button></span></p>
+            <p>Gold Mine <span><button className='minusMinerFromMine'>-</button>0<button onClick={e => this.props.addMiner(e)} className='addMinerToMine addToGold'>+</button></span></p>
             <h1>Hire miners or heroes to do your bidding!</h1>
             <button
-              className='hire-miner-button'
+              className='hire-button hire-miner-button'
               onClick={this.props.hireMiner}
               onMouseOver={this.showHireMinerModal}
               onMouseOut={this.hideHireMinerModal}
@@ -178,13 +178,13 @@ class RightSection extends React.Component {
               <p>Cost: {this.props.hireMinerPrice} Refined Bronze</p>
             </button>
             <button
-              className='hire-smelter-button'
+              className='hire-button hire-smelter-button'
               >
               <h3>Hire Smelter</h3>
               <p>Cost: 10 Refined Iron</p>
             </button>
             <button
-              className='hire-hero-button'
+              className='hire-button hire-hero-button'
               >
               <h3>Hire Hero</h3>
               <p>Cost: 10 Refined Gold</p>

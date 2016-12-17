@@ -70,7 +70,7 @@ section.right-section {
   display: none;
 }
 
-.right-section-tab-content button {
+.hire-button {
   position: relative;
   /*height: 8vw;*/
   /*width: 95%;*/
@@ -93,22 +93,25 @@ section.right-section {
   border-bottom-width: 3px;
 }
 
-.right-section-tab-content button:hover {
+.hire-button:hover {
     background-color: #e3e3e3;
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-.right-section-tab-content button:active {
+.hire-button:active {
   background-color: #CCC;
   border-color: rgba(0,0,0,0.9);
 }
 
-.right-section-tab-content button p {
+.hire-button p {
   text-align: center !important;
   font-size: 1.5vw;
 }
 
-
+.addMinerToMine, .minusMinerFromMine {
+  height: 100%;
+  width: 20px;
+}
 
 
 .furnace {

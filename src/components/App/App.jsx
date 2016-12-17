@@ -88,6 +88,9 @@ class App extends Component {
 
   componentDidMount() {
     // Save game automatically
+    this.setState({
+      totalMinerIdle: this.state.totalMinerAmount - this.state.totalMinerIdle
+    })
 
     setInterval(() => {
       console.log('saving game')
@@ -203,11 +206,13 @@ class App extends Component {
     let coverThePage = document.querySelector('.cover-the-page')
     let smeltButtonText=['smelting', 'smelting.', 'smelting..', 'smelting...', 'smelting..', 'smelting.']
     let i = 0
+
     if (this.state.isSmelting === false && whatToMake === 'bOre') {
 
       smeltButton.disabled = true
       smeltButton.style.cursor = 'not-allowed'
 
+      //BUTTON TEXT
       let changeButtonText = setInterval(() => {
         if (i >= smeltButtonText.length) {
           i = 0
@@ -350,7 +355,6 @@ class App extends Component {
   }
 
   upgradePickaxe() {
-    console.log('upgradePickaxe firing')
     // let whatToMine = document.querySelector('.what-to-mine').options[this.state.unlockMineLv]
     // console.log(whatToMine)
     if (this.state.r_bOre >= this.state.pickaxeUpgradePrice) {
@@ -368,7 +372,6 @@ class App extends Component {
   }
 
   upgradeFurnace() {
-    console.log('upgradeFurnace firing')
     if (this.state.r_bOre >= this.state.furnaceUpgradePrice) {
       this.setState({
         r_bOre: this.state.r_bOre -= this.state.furnaceUpgradePrice,
@@ -380,7 +383,6 @@ class App extends Component {
   }
 
   reinforcePickaxe() {
-    console.log('reinforcePickaxe firing')
     let whatToMine = document.querySelector('.what-to-mine').options[this.state.reinforcedPickaxeLv]
     // console.log(whatToMine)
     if (this.state.reinforcedPickaxeCost === 'Bronze') {
@@ -405,13 +407,35 @@ class App extends Component {
   }
 
   hireMiner() {
-    console.log('hireMiner firing')
     if (this.state.r_bOre >= this.state.hireMinerPrice) {
       this.setState({
         r_bOre: this.state.r_bOre -= this.state.hireMinerPrice,
         totalMinerAmount: this.state.totalMinerAmount += 1,
         hireMinerPrice: this.state.hireMinerPrice += 2,
       })
+    }
+  }
+
+  addMiner(e) {
+    if (e.target.classList.contains('addToBronze')) {
+      console.log('add miner to bronze')
+      console.log(`total miner idle: ${this.state.totalMinerIdle}`)
+      console.log(`total miner amount: ${this.state.totalMinerAmount}`)
+      if (this.state.totalMinerIdle > 0  && this.state.totalMinerIdle <= this.state.totalMinerAmount) {
+        console.log('shits good to go')
+        this.setState({
+          totalMinerIdle: this.state.totalMinerIdle -= 1
+        })
+        setInterval(() => {
+          this.setState({
+            bOre: this.state.bOre += 1
+          })
+        },1000)
+      }
+    } else if (e.target.classList.contains('addToIron')) {
+      console.log('add miner to iron')
+    } else if (e.target.classList.contains('addToGold')) {
+      console.log('add miner to gold')
     }
   }
 
@@ -490,6 +514,7 @@ class App extends Component {
           hireMinerPrice={this.state.hireMinerPrice}
           //
           totalMinerAmount={this.state.totalMinerAmount}
+          addMiner={this.addMiner.bind(this)}
         />
 
       </div>
