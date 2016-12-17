@@ -85,6 +85,7 @@ class App extends Component {
 
   componentDidMount() {
     // Save game automatically
+
     setInterval(() => {
       console.log('saving game')
       localStorage.setItem('orePerClick', this.state.orePerClick)
@@ -133,6 +134,16 @@ class App extends Component {
       localStorage.setItem('furnaceUpgradePrice', this.state.furnaceUpgradePrice)
       localStorage.setItem('smeltTimer', this.state.smeltTimer)
     } else {
+
+      setTimeout(() => {
+        console.log(this.state.reinforcedPickaxeLv)
+        let whatToMine = document.querySelector('.what-to-mine')
+        if (this.state.reinforcedPickaxeLv === 2) {
+          // console.log(whatToMine.options[0], whatToMine.options[1])
+          whatToMine.options[1].disabled = false
+        }
+      },10)
+
       this.setState({
         orePerClick: parseFloat(localStorage.getItem('orePerClick')),
 
