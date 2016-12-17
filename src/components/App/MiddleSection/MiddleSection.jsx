@@ -34,7 +34,6 @@ class MiddleSection extends React.Component {
     if (whatToMine === 'bOre') {
       middleSection.style.background = gradient1
     } else if (whatToMine === 'iOre') {
-      console.log('change')
       middleSection.style.background = gradient2
     } else if (whatToMine === 'gOre') {
       middleSection.style.backgroundImage = 'url("http://static6.businessinsider.com/image/5643b7bd9dd7cc1a008c9289/chinese-scientists-found-a-literal-gold-mine-under-the-sea.jpg")'
@@ -42,20 +41,27 @@ class MiddleSection extends React.Component {
   }
 
   showNumber(e) {
-    console.log('showNumber firing')
     // Gets a random number between 1-100, then subtract 50
     // So the final value would be a number between -50 and 50
     let randomNumber = Math.floor(Math.random() * 101) - 50;
 
+    let whatToMine = document.querySelector('.what-to-mine').value
+
     let pops = document.querySelector('.pops')
     let currentX = e.pageX+(randomNumber)
     let currentY = e.pageY-100
-    console.log(currentY, currentX)
 
     let newDiv = document.createElement('div')
     newDiv.classList.add('pop')
-    newDiv.innerHTML = `+${this.props.orePerClick.toFixed(1)}`
-    // newDiv.style.position = 'fixed'
+    if (whatToMine === 'bOre') {
+      newDiv.innerHTML = `+${this.props.orePerClick.toFixed(1)}`
+    } else if (whatToMine === 'iOre') {
+      newDiv.innerHTML = `+${(this.props.orePerClick/5).toFixed(1)}`
+    } else if (whatToMine === 'gOre') {
+      newDiv.innerHTML = `+${(this.props.orePerClick/10).toFixed(1)}`
+    }
+
+
     newDiv.style.left = `${currentX}px`
     newDiv.style.top = `${currentY}px`
     pops.append(newDiv)

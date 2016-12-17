@@ -136,11 +136,15 @@ class App extends Component {
     } else {
 
       setTimeout(() => {
-        console.log(this.state.reinforcedPickaxeLv)
         let whatToMine = document.querySelector('.what-to-mine')
         if (this.state.reinforcedPickaxeLv === 2) {
           // console.log(whatToMine.options[0], whatToMine.options[1])
+          whatToMine.options[0].disabled = false
           whatToMine.options[1].disabled = false
+        } else if (this.state.reinforcedPickaxeLv === 3) {
+          whatToMine.options[0].disabled = false
+          whatToMine.options[1].disabled = false
+          whatToMine.options[2].disabled = false
         }
       },10)
 
@@ -320,19 +324,11 @@ class App extends Component {
       })
     } else if (whatToMine === 'iOre') {
       this.setState({
-        iOre: this.state.iOre += this.state.orePerClick
+        iOre: this.state.iOre += this.state.orePerClick/5
       })
     } else if (whatToMine === 'gOre') {
       this.setState({
-        gOre: this.state.gOre += this.state.orePerClick
-      })
-    } else if (whatToMine === 'pOre') {
-      this.setState({
-        pOre: this.state.pOre += this.state.orePerClick
-      })
-    } else if (whatToMine === 'dOre') {
-      this.setState({
-        dOre: this.state.dOre += this.state.orePerClick
+        gOre: this.state.gOre += this.state.orePerClick/10
       })
     }
   }
